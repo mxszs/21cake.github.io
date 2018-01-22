@@ -1,0 +1,25 @@
+body{font-family:'PingFang SC','Heiti SC','微软雅黑',Helvetica,Arial;font-size:12px;color:#684029;overflow-x:hidden}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+fieldset,img{border:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;outline:none}
+button{border:none;cursor:pointer}
+input,button,textarea,select{*font-size:100%}
+textarea{resize:none}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+th,tr,td{margin:0;padding:0px}
+body{min-width:1200px;overflow:auto}
+:link,:visited,ins{text-decoration:none}
+img,a{border:none;margin:0px;padding:0px}
+a:visited,a:link,a{color:#684029;text-decoration:none;outline:none;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
+a:hover{color:#BB9772}
+a:focus{outline:none}
+input,textarea,select{outline:none}
+input[type="button"],input[type="submit"]{border:none;cursor:pointer} 
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#BFBFBF}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#BFBFBF}
+input::-moz-placeholder,textarea::-moz-placeholder{color:#BFBFBF}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#BFBFBF}
+.clear:after{content:".";clear:both;display: block;height: 0;visibility:hidden;}
+.clear{zoom:1;}
