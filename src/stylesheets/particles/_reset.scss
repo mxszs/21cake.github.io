@@ -23,3 +23,7 @@ input::-moz-placeholder,textarea::-moz-placeholder{color:#BFBFBF}
 input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#BFBFBF}
 .clear:after{content:".";clear:both;display: block;height: 0;visibility:hidden;}
 .clear{zoom:1;}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
