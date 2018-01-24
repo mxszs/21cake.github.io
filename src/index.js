@@ -1,7 +1,8 @@
+import './stylesheets/index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './stylesheets/index.scss';
 
 import App from './javascripts/App';
 import Home from './javascripts/components/home/Home'

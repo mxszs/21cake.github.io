@@ -1,19 +1,21 @@
 
 import React from 'react'
-import Header from '../header'
-class Home extends React.Component{
+
+class Classify extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-
+            Classifys:[
+                {id:1,}
+            ]
         }
     }
     render(){
         return(
             <div>
-                <Header/>
+                分类
             </div>
         )
     }
 }
-export default Home
+export default  Classify
