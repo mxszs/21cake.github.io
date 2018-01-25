@@ -15,6 +15,28 @@
     }
     .cake-list{
         overflow: hidden;
+        .cake-item-title{
+            // 全部分类时显示
+            
+            text-align: center;
+            padding: 45px 0;
+            &:first-child{
+                padding-top: 10px;
+            }
+            h2{
+                padding: 0 15px;
+                display: inline-block;
+                text-align: left;
+                border-left: 2px solid #684029;
+                font-size: 20px;
+                line-height: 20px;
+                span{
+                    line-height: 20px;
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+        }
         li{
             float: left;
             padding: 0 18px;

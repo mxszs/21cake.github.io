@@ -18,5 +18,14 @@
     dd{
         float: left;
         margin: 0 13px;
+
+        .active{
+            color: #BB9772;
+        }
+    }
+    .disable{
+        a{
+            color: #bbb
+        }
     }
 }

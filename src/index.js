@@ -22,7 +22,7 @@ let routes = <Router history={hashHistory}>
 	<Route path="/" component={App}>
 		<IndexRedirect to="home"/>
 		<Route path="home" component={Home}/>
-		<Route path="list" component={List}/>
+		<Route path="list/:path" component={List}/>
 		<Route path="login" component={Login}/>
 		<Route path="mine" component={Mine}/>
 		<Route path="register" component={Register}/>

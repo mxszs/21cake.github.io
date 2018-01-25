@@ -9,9 +9,9 @@ class Header extends React.Component{
         this.state = {
             navs:[
                 {id:1,type:"首页",path:"/home"},
-                {id:2,type:"蛋糕",path:"/cake"},
-                {id:3,type:"冰淇淋",path:"/iceCream"},
-                {id:4,type:"小切块",path:"/smallDice"},
+                {id:2,type:"蛋糕",path:"list/1"},
+                {id:3,type:"冰淇淋",path:"list/2"},
+                {id:4,type:"小切块",path:"list/3"},
                 {id:5,type:"全国配送",path:"/distribution"},
                 {id:6,type:"企业专区",path:""} 
             ],
@@ -35,7 +35,6 @@ class Header extends React.Component{
     }
 
     changeCity(id){
-        console.log(id)
         this.state.city.forEach((item)=>{
             if(item.id === id){
                 return item
@@ -83,7 +82,7 @@ class Header extends React.Component{
                     <ul className="header-nav">
                         {
                             navs.map((item)=>(
-                                <li key={item.id}><Link to="list">{item.type}</Link></li>
+                                <li key={item.id}><Link to={item.path}>{item.type}</Link></li>
                             ))
                         }
                     </ul>

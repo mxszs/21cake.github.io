@@ -6,15 +6,35 @@ class Item extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-
+            
         }
     }
     render(){
         let {data} = this.props
+        let num = this.props.path
+        let id = this.props.id || "0"
+        let showGoods = []
+        if(id!=="0"){
+            data[num-1].goods.forEach(item => {
+                let goodId = item.tag_ids.split(",")
+                let boo = goodId.some((item)=>{
+                    if(item == id){
+                        return true
+                    }else{
+                        return false
+                    }
+                })
+                if(boo){
+                    showGoods.push(item)
+                }
+            });
+        }else{
+            showGoods = data[num-1].goods
+        }
         return(
             <div>
                 {
-                    data.map((item)=>(
+                    showGoods.map((item)=>(
                         <li key={item.cake_goods_id}>
                             <div className="cake-item">
                                 <Link className="item-img">
@@ -24,15 +44,19 @@ class Item extends React.Component{
                                 </Link>
                                 <div className="label-entrance">
                                     {
-                                        item.tags.map((it)=>(
-                                            <Link key={it.id}>{it.content} ></Link>
-                                        ))
+                                        item.tags.map((it,i)=>{
+                                            if(i<=2){
+                                                return <Link key={it.id}>{it.content} ></Link>
+                                            }
+                                        })
                                     }
                                 </div>
                                 <div className="label">
-                                    <img src={`http://www.21cake.com${item.label[0].icon}`} alt={item.label[0].name}/>
+                                    {
+                                        item.label.length? <img src={`http://www.21cake.com/${item.label[0].icon}`} alt={item.label[0].name}/>: ""
+                                    }
                                 </div>
-                                <a href="javascript:;" className="addCart">
+                                <a href="javascript:void(0);" className="addCart">
                                     <i></i>
                                     加入购物车
                                 </a>
