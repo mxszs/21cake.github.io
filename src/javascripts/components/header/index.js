@@ -1,8 +1,10 @@
 
 import React from 'react'
 import {Link} from 'react-router'
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
+import UserActions from '../../../redux/ActionCreators/UserActions'
 class Header extends React.Component{
     constructor(props){
         super(props)
@@ -30,12 +32,14 @@ class Header extends React.Component{
                 {id:2,name:"优惠券",path:''},
                 {id:3,name:"代金卡",path:''},
                 {id:4,name:"退出登录",path:''},
-            ]
+            ],
+            isMine:true
         }
+        this.ilss = this.ilss.bind(this)
     }
 
     changeCity(id){
-        console.log(id)
+       // console.log(id)
         this.state.city.forEach((item)=>{
             if(item.id === id){
                 return item
@@ -43,22 +47,32 @@ class Header extends React.Component{
         })
     }
 
-
+    componentWillReceiveProps(nextProps){
+        //利用钩子函数将自己的状态改变，（传入的nexProps中接收了redux中的数据）
+                 this.setState({
+                        isMine:!nextProps.User.isMine//改变状态
+                    })
+        }
+    ilss(){//调用actions中的方法
+        this.props.UserActions.mineHandler() 
+    }
 
     render(){
-        let {navs} = this.state
+        //console.log(this.props)
+        let {navs,isMine} = this.state
         let {city} = this.state
         let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
         let {users} = this.state
         let goodNum = '' //商品个数
-        let user = []//登录信息
+       // let user = []//登录信息
         let User ;
-        if(user.length){
+       // console.log(this.props.UserActions.mineHandler,11111)
+        if(isMine){//判断登录状态
             User =  <div>
                         <Link to="login"><img src="/images/header/user-img.png" alt="user"/></Link>
                         <ul className="user-login">
                             {users.map((item)=>(
-                                <li><Link to={item.path} key={item.id}>{item.name}</Link></li>
+                                <li  onClick={item.id==4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -118,5 +132,8 @@ class Header extends React.Component{
         )
     }
 }
-// export default connect(state=>state)(Header)
-export default Header
+ export default connect(state=>state,(dispatch)=>{
+	return {
+		UserActions:bindActionCreators(UserActions,dispatch)
+	}
+})(Header)

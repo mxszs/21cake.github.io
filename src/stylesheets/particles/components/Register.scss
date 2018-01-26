@@ -1,36 +1,42 @@
+
+@import '~antd/dist/antd.css';
 body,html{
     width: 100%;
     height: 100%;
 }
 .register-bg{
-    width: 1349px;     height: 582px;
+    width: 1349px;  height: 640px;
+    margin-top:60px;
     background:url(/register/register_bg.jpg) no-repeat top center;
     position: relative;
     .form-box{
        
         .form{
                position: absolute;
-                width: 302px;
-                top: 114px;
-                right: 0;
+                //width: 302px;
+                top: 125px;
                 padding: 26px 42px;
                 border: 1px #E9E9E9 solid;
                 background: #fff;
-                right: 200px;
+                right: 100px;
                     .regi-user{
                             width: 100%;
                             text-align: center;
                             line-height: 25px;
                             font-size: 18px;
-                            color: #c9c9c9;
+                            color: #482618;
                             margin-bottom: 25px;
                             cursor: pointer;
                             -webkit-user-select: none;
                             -moz-user-select: none;
                             -ms-user-select: none;
                             user-select: none;
+                            .action{
+                                color:#c9c9c9;
+                            }
                     }
                 .form-input-item{
+                        position: relative;
                         margin: 10px 0;
                     input{
                             width: 290px;
@@ -94,6 +100,39 @@ body,html{
                                 }
                             }
                         }
+                        .pront-bgphone{
+                                position: absolute;
+                                 height: 16px;
+                                width: 16px;
+                                background: url(/images/header/icon.png) no-repeat;
+                                background-position: -61px -44px;
+                                background-size: 310px 120px;
+                                right: 20px;
+                                top: 10px;
+                                display: none;
+                         }
+                        .pront-bgpassword{
+                                position: absolute;
+                                 height: 16px;
+                                width: 16px;
+                                background: url(/images/header/icon.png) no-repeat;
+                                background-position: -61px -44px;
+                                background-size: 310px 120px;
+                                right: 20px;
+                                top: 10px;
+                                display: none;
+                         }
+                        .pront-bgImg{
+                                position: absolute;
+                                 height: 16px;
+                                width: 16px;
+                                background: url(/images/header/icon.png) no-repeat;
+                                background-position: -61px -44px;
+                                background-size: 310px 120px;
+                                left: 100px;
+                                top: 10px;
+                                display: none;
+                         }
 
                 }
                 .regi-button{
@@ -109,6 +148,7 @@ body,html{
                         border: 0;
                         cursor: pointer;
                         color: #fff;
+                        margin-top:40px;
                 }
                     .reading-protocol{
                             margin-top: 15px;
@@ -119,6 +159,29 @@ body,html{
                                 color: #2a99fa;
                             }
                     }
+                        .reading-protocolbox{
+                                width: 302px;
+                                margin-top:15px; 
+                                label{
+                                        float: left;
+                                }
+                                .reading-right{
+                                    float: right;  
+                                    span{
+                                        cursor: pointer;
+                                    }  
+                                }
+                        }
+                        .point{
+                                position: absolute;
+                                top: 345px;
+                                left: 42px;
+                                color: red;
+                        }
+                        .point_name{
+                                color: red;
+                                line-height: 10px;
+                        }
             }
     }
 }
