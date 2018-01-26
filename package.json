@@ -5,7 +5,7 @@
   "dependencies": {
     "antd": "^3.1.4",
     "axios": "^0.17.1",
-    "node-sass": "^4.7.2",
+    "jquery": "^1.12.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.6",

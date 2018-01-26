@@ -11,9 +11,9 @@ class Header extends React.Component{
         this.state = {
             navs:[
                 {id:1,type:"首页",path:"/home"},
-                {id:2,type:"蛋糕",path:"/cake"},
-                {id:3,type:"冰淇淋",path:"/iceCream"},
-                {id:4,type:"小切块",path:"/smallDice"},
+                {id:2,type:"蛋糕",path:"list/1"},
+                {id:3,type:"冰淇淋",path:"list/2"},
+                {id:4,type:"小切块",path:"list/3"},
                 {id:5,type:"全国配送",path:"/distribution"},
                 {id:6,type:"企业专区",path:""} 
             ],
@@ -32,14 +32,12 @@ class Header extends React.Component{
                 {id:2,name:"优惠券",path:''},
                 {id:3,name:"代金卡",path:''},
                 {id:4,name:"退出登录",path:''},
-            ],
-            isMine:true
+            ]
         }
         this.ilss = this.ilss.bind(this)
     }
 
     changeCity(id){
-       // console.log(id)
         this.state.city.forEach((item)=>{
             if(item.id === id){
                 return item
@@ -47,18 +45,17 @@ class Header extends React.Component{
         })
     }
 
-    componentWillReceiveProps(nextProps){
-        //利用钩子函数将自己的状态改变，（传入的nexProps中接收了redux中的数据）
-                 this.setState({
-                        isMine:!nextProps.User.isMine//改变状态
-                    })
-        }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     if (this.props.User.userLoginInfo.phone !== nextProps.User.userLoginInfo.phone) {
+    //             return true;
+    //     }
+    // }
     ilss(){//调用actions中的方法
-        this.props.UserActions.mineHandler() 
-    }
+        this.props.UserActions.logoutHandler() 
 
+    }
     render(){
-        //console.log(this.props)
+        console.log(this.props)
         let {navs,isMine} = this.state
         let {city} = this.state
         let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
@@ -66,10 +63,9 @@ class Header extends React.Component{
         let goodNum = '' //商品个数
        // let user = []//登录信息
         let User ;
-       // console.log(this.props.UserActions.mineHandler,11111)
-        if(isMine){//判断登录状态
+        if(this.props.User.userLoginInfo.phone){//判断登录状态
             User =  <div>
-                        <Link to="login"><img src="/images/header/user-img.png" alt="user"/></Link>
+                        <Link to="/mine"><img src="/images/header/user-img.png" alt="user"/></Link>
                         <ul className="user-login">
                             {users.map((item)=>(
                                 <li  onClick={item.id==4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
@@ -84,10 +80,6 @@ class Header extends React.Component{
                     </div>
         }
 
-
-
-
-
         return(
             <header>
                 <div className="header">
@@ -97,7 +89,7 @@ class Header extends React.Component{
                     <ul className="header-nav">
                         {
                             navs.map((item)=>(
-                                <li key={item.id}><Link to="list">{item.type}</Link></li>
+                                <li key={item.id}><Link to={item.path}>{item.type}</Link></li>
                             ))
                         }
                     </ul>

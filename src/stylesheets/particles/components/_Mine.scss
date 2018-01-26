@@ -1,0 +1,25 @@
+#info_swiper{
+    width: 1349px;
+      padding-top:80px;
+    .info_box{
+        background: red;
+        min-width: 960px;
+        padding: 0 20px;
+        margin: 30px auto;
+        max-width: 1200px;
+        .edit_info{
+             float: left;
+             width: 422px;
+             height: 236px;
+             background: #f6f5f3;
+             margin: 0px 21px 0px 0px;
+        }  
+            .cash_coupou{
+                 float: left;
+                    padding: 0px 24px;
+                     height: 236px;
+                      width: 702px;
+                    background: #f6f5f3;  
+            }              
+    }
+}

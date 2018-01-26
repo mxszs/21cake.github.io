@@ -7,7 +7,7 @@ import FormInputItem from '../from/FormInputItem/formInput'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import { Modal, Button } from 'antd'
-import UserActions from '../../../redux/ActionCreators/UserActions'
+import UserActions from '../../../redux/ActionCreators/UserActions'//引入actions方法
 class Login extends React.Component{
     constructor(props){
         super(props)
@@ -28,20 +28,18 @@ class Login extends React.Component{
         success() {//tanch
 			const modal = Modal.success({//弹出框
 				title: '请正确填写登录信息'
-				//content: 'This modal will be destroyed after 1 second',
 			});
-			//setTimeout(() => modal.destroy(), 10000);
+			    setTimeout(() => modal.destroy(), 10000);
             }
         
         loginHandler(data){	//登录
-           // console.log(this.props)
             this.elementsone = document.getElementsByTagName("input")[0]
             this.elementstwo = document.getElementsByTagName("input")[1]
            
                 if(this.elementsone.value&&this.elementstwo){
                      if(this.elementsone.value===this.props.User.userInfo.phone&&this.elementstwo.value===this.props.User.userInfo.password){
                         this.setState({isLogin:true})//改变状态
-                         this.props.UserActions.mineHandler()//调用actions的方法
+                        this.props.UserActions.LoginHandler(data)
                         hashHistory.push('/home')//成功后跳转home
                      }else{
                            this.success()
