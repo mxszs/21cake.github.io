@@ -11,7 +11,7 @@ class Footer extends React.Component{
     render(){
         return(
             <div className='footer'>
-                <img className='img' src={require('../../../assets/img/footer-logo.png')} alt="" />
+                <img className='img' src='/img/footer-logo.png' alt="" />
             	<div className="footer-nav">
 			        <a href="">联系我们</a>
 			        <span>|</span>
@@ -25,11 +25,11 @@ class Footer extends React.Component{
 			    </div>
 			    <div className="footer-icon">
 			        <a href="">
-			            <img className='img1' src={require('../../../assets/img/footericon-01.png')} alt="" />
+			            <img className='img1' src='/img/footericon-01.png'alt="" />
 			        </a>
 			        <a className="footer-weixin">
 				        
-			            <img className='img1' src={require('../../../assets/img/footericon-02.png')} alt="" />
+			            <img className='img1' src='/img/footericon-02.png' alt="" />
 			        </a>
 			        <a className="footer-app">
 			            APP

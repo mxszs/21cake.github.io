@@ -34,13 +34,7 @@ class Content extends React.Component{
             success: function(data) {
             	
                 that.setState({data:data.data[0].data}) 
-     
-//              console.log(data.data[0])
-//              console.log(data.data[0].title)
-//              console.log(data.data[0].data)
-//              console.log(data.data[0].data[0])
-//              console.log(data.data[0].data[1])
-                
+  
             }
             
         });
@@ -50,10 +44,10 @@ class Content extends React.Component{
         return(
             <div className="content">
             	<div className='content-nav'>
-            		<a href=''><img src={require('../../../assets/img/nav1.jpg')} alt="" /></a>
-            		<a href=''><img src={require('../../../assets/img/nav2.jpg')} alt="" /></a>
-		            <a href=''><img src={require('../../../assets/img/nav3.jpg')} alt="" /></a>
-		            <a href=''><img src={require('../../../assets/img/nav4.jpg')} alt="" /></a>
+            		<a href=''><img src='/img/nav1.jpg' alt="" /></a>
+            		<a href=''><img src='/img/nav2.jpg' alt="" /></a>
+		            <a href=''><img src='/img/nav3.jpg' alt="" /></a>
+		            <a href=''><img src='/img/nav4.jpg' alt="" /></a>
             
             	</div>
                 
