@@ -96,7 +96,9 @@ class Header extends React.Component{
                                 {
                                     city.map((item)=>{
                                         if(item.id !== cityShow.id){
-                                           return  <li key={item.id}><a href="javascript:void(0);">{item.name}</a></li>
+                                           return  <li key={item.id}><a>{item.name}</a></li>
+                                        }else{
+                                            return ''
                                         }
                                     })
                                 }

@@ -38,7 +38,9 @@ class List extends React.Component{
             async: true,
             dataType: 'jsonp',
             success: function(data) {
-                that.setState({data:data.data}) 
+                if(data.status==="ok"){
+                    that.setState({data:data.data}) 
+                }
             }
         });
     }
@@ -49,7 +51,7 @@ class List extends React.Component{
         let {data} = this.state
         return(
             <div className="section-box">
-                
+            
                 <Cake data={data} path={path}/>
             </div>
         )

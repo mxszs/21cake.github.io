@@ -1,0 +1,83 @@
+
+
+.add_cart{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    background: #F8F8F8;
+    padding: 12px 12px 20px 12px;
+    // display: none;
+    z-index: 2000;
+    h4{
+        font-size: 16px;
+        font-weight: bold;
+        color: #684029;
+        margin-bottom: 14px;
+    }
+    .con{
+        p{
+            margin: 5px 0
+        }
+        ul{
+            li{
+                float: left;
+                width: 50px;
+                height: 30px;
+                text-align: center;
+                color: #7A5844;
+                cursor: pointer;
+                margin: 0 12px 14px 0;
+                overflow: hidden;
+                a{
+                    display: block;
+                    height: 28px;
+                    border: 1px solid #e7e0dd;
+                    line-height: 28px;
+                    position: relative;
+                    &.activer{
+                        border-color: #684029;
+                        i{
+                            background: url(/images/header/icon.png) no-repeat;
+                            background-position: 0px -40px;
+                            background-size: 310px 120px;
+                            display: block;
+                            height: 10px;
+                            width: 10px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .btn-buy-add{
+        button{
+            color: #7A5844;
+            background: #fff;
+            float: left;
+            height: 28px;
+            width: 112px;
+            line-height: 28px;
+            border: 1px solid #684029    
+        }
+        .btn-add{
+            color: #fff;
+            background: #684029;
+            float: right;
+        }
+    }
+
+}
+
+
+.body_mast{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background:transparent;
+}
