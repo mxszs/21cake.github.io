@@ -34,7 +34,7 @@ class Content extends React.Component{
             success: function(data) {
             	
                 that.setState({data:data.data[0].data}) 
-  
+  				console.log(data)
             }
             
         });

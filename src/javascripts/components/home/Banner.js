@@ -16,7 +16,6 @@ class Banner extends React.Component{
    componentWillMount(){
     	
 		axios.get("/banner.json").then((res)=>{
-			console.log(999,res)
 			
 			this.setState({bannerImg:res.data}) 
 
