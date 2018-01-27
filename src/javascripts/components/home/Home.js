@@ -18,7 +18,7 @@ class Home extends React.Component{
     	
         return(
             <div className="main-box">
-                <header></header>
+                <header/>
                 
                 <Banner/>
                 
