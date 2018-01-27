@@ -1,0 +1,162 @@
+
+.content{
+    height:3000px;
+    .content-nav{
+        width:1120px;
+        height:103px;
+        margin: 0 auto; 
+        padding:40px 0;
+        background: #fff;
+        img{
+            margin:0 8px;
+            
+        }
+    }
+    .content-new{
+        width:1200px;
+        height:800px;
+        background: #fff;
+        margin: 0 auto;  
+        h4{
+            margin:50px 0 20px 50px;
+            font-size: 26px;
+            font-weight: 400;
+            span{
+                font-size: 14px;
+                font-weight: 200;
+                margin-left: 5px;
+            }
+        }
+       .content-new-img{
+            width:1100px;
+            height:345px;
+            margin: 0 auto; 
+       }  
+       .content-new-list{
+           margin-left: 50px;
+           width:1100px;
+           height:390px;
+           position: relative;
+           overflow: auto;
+           ul{
+               height:370px;
+               position: absolute;
+               width: 2053px;
+               top:0;
+              
+               li{
+                   float: left;
+                   margin:15px 15px 0 0;
+                   line-height: 25px;
+                   
+                   img{
+                       background: #eee;
+                       border-radius: 10px;
+                   }
+                   h5{
+                       font-size: 16px;
+                   }
+                   h6{
+                       font-size: 14px;
+                   }
+                   p{
+                       color: #D5BFA7;
+                       span{
+                           border: 1px solid #D5BFA7;
+                           border-radius: 10px; 
+                           margin: 5px;
+                           padding: 0 5px;
+                       }
+                   }
+                   .cart-info{
+                       height:30px;
+                       padding-top: 10px;
+                       span{
+                           float: left;
+                           font-size: 14px;
+                           color: #BB9772;
+                       }
+                       a{
+                           display: inline-block;
+                           float: right;
+                           width: 80px;
+                           height:20px;
+                           text-align: center;
+                           line-height: 20px;
+                           background: #643E28;
+                           color: #fff;
+                       }
+                   }
+               }
+           }
+       } 
+    }
+    .content-active{
+        width:1200px;
+        height:400px;
+        background: #fff;
+        margin: 100px auto;  
+        h4{
+            margin:50px 0 20px 50px;
+            font-size: 26px;
+            font-weight: 400;
+            span{
+                font-size: 14px;
+                font-weight: 200;
+                margin-left: 5px;
+            }
+        }
+        .content-active-img{
+            img{
+                width:45%;
+                border-radius: 10px;
+                
+            }
+            img:first-child{
+                margin:0 20px 0 50px;
+            }
+        }
+    }
+    .content-text{
+        width:1200px;
+        height:500px;
+        background: #fff;
+        margin: 100px auto;  
+        h4{
+            margin:50px 0 20px 50px;
+            font-size: 26px;
+            font-weight: 400;
+            span{
+                font-size: 14px;
+                font-weight: 200;
+                margin-left: 5px;
+            }
+        }
+        .content-text-info{
+            width:1120px;
+            margin: 0 auto;
+            a{
+                display: block;
+                width:48%;
+                float: left;
+                line-height: 50px;
+                border:1px solid #ccc;
+                border-radius: 10px;
+                margin-left: 20px;
+                img{
+                    width:100%;
+                    border-radius: 10px 10px 0 0;
+                }
+                h4{
+                    margin: 0;
+                    padding-left: 20px;
+                }
+                p{
+                    padding-left: 20px;
+                    font-size: 14px;
+                    color: #BB9772;
+                }
+            }
+        }
+    }
+}
