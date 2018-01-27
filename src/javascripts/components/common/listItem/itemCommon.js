@@ -22,7 +22,7 @@ class itemCommon extends React.Component{
         let isShow ={}
         num.forEach((i)=>{
             props.data.content.forEach((item)=>{
-                if(i == item.id){
+                if(i === item.id){
                     isShow[i] = true
                     return
                 }
@@ -45,7 +45,21 @@ class itemCommon extends React.Component{
                         className={ path ? path === '0'?"active":'':id===''||id==='0' ? "active":''}
                         onClick={ path ? this.props.changePath.bind('','0'):this.props.changeId.bind('','0')}
                     >
-                        {data.name.length==='0'?'':data.name==='分类'?'全部分类':'全部口味'}
+                        {   
+                            path? 
+                                data.name.length==='0'?
+                                    '':
+                                    data.name==='分类'?
+                                        '全部分类':
+                                        '全部口味':
+                                id ?
+                                    data.name.length==='0'?
+                                        '':
+                                        data.name==='分类'?
+                                            '全部分类':
+                                            '全部口味':
+                                ''
+                        }
                     </a>
                 </dd>
                 
