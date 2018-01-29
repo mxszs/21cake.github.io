@@ -12,13 +12,13 @@ const User = (state=defaultState,action)=>{
 		
 		case 'CHANGE_USER_INFO':
 			new_state.userInfo = action.userInfo;			
-			return new_state;break;
+			return new_state;
 		case 'CHANGE_USER_LOGININFO':
 			new_state.userLoginInfo = action.userLoginInfo;			
-			return new_state;break;
+			return new_state;
 		case 'REMOVE_USER_INFO':
 			new_state.userInfo = null;
-			return new_state;break;
+			return new_state;
 		
 		default:return new_state;
 	}

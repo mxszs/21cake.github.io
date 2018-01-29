@@ -1,13 +1,15 @@
 #info_swiper{
     width: 1349px;
       padding-top:80px;
+      padding-bottom: 70px;
     .info_box{
-        background: red;
+        overflow: hidden;
         min-width: 960px;
         padding: 0 20px;
         margin: 30px auto;
         max-width: 1200px;
         .edit_info{
+           
              float: left;
              width: 422px;
              height: 236px;
@@ -21,9 +23,9 @@
                     height: 120px;
                     //background: red;
                     border-radius: 50%;
-                    background: url(/register/avator-bg.png) 0 0 no-repeat;
+                  // background: url(/register/avator-bg.png) 0 0 no-repeat;
                     .change_head{
-                        background: url(/register/avator-photo.png) 0 0 no-repeat;
+                    // background: url(/register/avator-photo.png) 0 0 no-repeat;
                         display: block;
                         background-size: 120px;
                         width: 120px;
@@ -31,7 +33,7 @@
                     }
                     
                     .change_head_mask{
-                         background: url(/register/head_mask.png) 0 0 no-repeat;
+                        // background: url(/register/head_mask.png) 0 0 no-repeat;
                          position: absolute;
                          top: 0;
                          left: 0;
@@ -39,9 +41,21 @@
                         width: 120px;
                         height: 120px;
                         display: none;
+                       
+                    }
+                    .change_head_sk{
+                         position: absolute;
+                          top: 1px;
+                          left:1px;
+                         border-radius:50%; 
+                         z-index: 20;
+                         .ant-upload.ant-upload-select-picture-card{
+                             border-radius:50%;
+                         }
                     }
                     .change_head:hover .change_head_mask{
                             display: block;
+                          
                     }
                    
              }
@@ -62,6 +76,7 @@
                          ul{
                              li{
                                 // line-height: 30px;
+                                cursor: pointer;
                                  .edit_ico{
                                      width: 20px;
                                     height: 30px;
@@ -92,6 +107,317 @@
                      height: 236px;
                       width: 702px;
                     background: #f6f5f3;  
+                    ul{
+                        li{
+                            float: left;
+                            width: 234px;
+                            height: 236px;
+                            //background: red;
+                            .bg{
+                                    width: 53px;
+                                    height: 53px;
+                                    display: block;
+                                    margin: 77px auto 18px;
+                                    &.one{
+                                        background: url(/register/ac_balance.png) 0 0 no-repeat;
+                                    }
+                                    &.two{
+                                        background: url(/register/ac_coupon.png) 0 0 no-repeat;
+                                    }
+                                    &.three{
+                                        background: url(/register/ac_card.png) 0 0 no-repeat;
+                                    }
+                            }
+                                .active_box{
+                                    text-align: center;
+                                    font-size: 14px;
+                                    p{
+                                        color: #988575;
+                                    }
+                                    a{
+                                            border: none;
+                                            color: #faaf3b;
+                                            font-size: 14px;
+                                            margin-left: 15px;
+                                    }
+                                }
+                        }
+                    }
             }              
     }
+        //member部分
+        .member_box{
+             background: #f6f5f3;
+            .member{
+                min-width: 960px;
+                padding: 0 20px;
+                margin: 20px auto;
+                max-width: 1200px;
+               overflow: hidden;
+                    .ca_title{
+                            padding-top: 0;
+                            color: #5f504e;
+                            font-size: 22px;
+                            text-align: center;
+                            margin-top: 68px;
+                            margin-bottom: 8px;
+                    }
+                    .current-identity {
+                        text-align: center;
+                        .normal-user {
+                            color: #c6b198;
+                        }
+                    }
+                .img_box{
+                        padding: 20px 0;
+                        margin:0 0 40px 65px;
+                }
+            }
+        }
+        .fruit_rule_title{
+                padding-top: 25px;
+                padding-bottom: 5px;
+                font-size: 13px;
+                color: #513630;
+                line-height: 30px;
+                font-weight: 500;
+        }
+            .fruit_rule{
+                    font-size: 13px;
+                    color: #513630;
+                    line-height: 30px;
+                    font-weight: 500;
+            }
 }
+        .member_Info{
+            width: 1200px;
+            padding-top:90px; 
+            margin-bottom: 50px;
+            margin: 0 auto 50px;
+            //info
+                .info_title{
+                        font-size: 16px;
+                        color: #383838;
+                        line-height: 22px;
+                        margin-top: 40px;
+                        margin-bottom: 16px;
+                }
+                    .info-box {
+                border: 1px solid #E1E1E1;
+            }
+
+            .info-box .info-box-title {
+                font-size: 14px;
+                line-height: 44px;
+                height: 44px;
+                background: #FBFBFB;
+                border-bottom: 1px solid #E1E1E1;
+                margin-bottom: 25px;
+            }
+
+            .info-box label {
+
+                font-size: 14px;
+                line-height: 30px;
+                width: 70px;
+                display: inline-block;
+            }
+
+            .info-box div {
+                padding-left: 17px;
+                margin-bottom: 16px;
+                font-size: 0;
+            }
+
+            .info-box input[type=text] {
+
+                font-size: 14px;
+                height: 28px;
+                background: #FFFFFF;
+                border: 1px solid #E1E1E1;
+                padding-left: 8px;
+                width: 232px;
+            }
+
+            .info-box input[type=radio] {
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+            }
+
+            .info-box .info-text-button {
+                background: #fff;
+                font-size: 14px;
+                display: inline-block;
+                margin-left: 15px;
+                text-decoration: underline;
+                color: #D5BFA7;
+            }
+
+            .text-span {
+                font-size: 11px;
+                color: #FF4A2D;
+                margin-left: 17px;
+                line-height: 30px;
+                height: 30px;
+                display: block;
+            }
+            .info-box span{
+                font-size: 13px;
+            }
+
+            .date span {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            .date select {
+
+                font-size: 14px;
+                width: 70px;
+                height: 28px;
+                background: #FFFFFF;
+                border: 1px solid #E1E1E1;
+                border-radius: 0;
+            }
+
+            .info-box div.data-detail {
+                border-bottom: 2px dashed #E1E1E1;
+                padding-left: 0;
+                padding-bottom: 15px;
+                margin: 0 17px;
+            }
+
+            .data-detail p {
+                padding-left: 70px;
+                line-height: 26px;
+            }
+
+            .info-submit {
+                background: #684029;
+                color: #fff;
+                font-size: 14px;
+                width: 100px;
+                height: 30px;
+                margin: 0 17px 45px;
+                display: block;
+            }
+            //address
+            .content-box{
+                    width: 1200px;
+                    margin: 0 auto;
+                    padding-bottom: 50px;
+                    .address-title {
+                        font-size: 14px;
+                        color: #383838;
+                        line-height: 22px;
+                        margin-top: 40px;
+                        font-weight: bold;
+                    }
+                    .address-empty-box{
+                        .add-address-button {
+                                    display: block;
+                                    border: 1px dashed #E1E1E1;
+                                    width: 1132px;
+                                    height: 118px;
+                                    color: #80695B;
+                                    margin: 40px auto 0;
+                                    background: #fff;
+                                }
+                    }
+                             //order
+                             .order-tab-list {
+                                    height: 15px;
+                                    font-size: 15px;
+                                    color: #D5BFA7;
+                                    text-align: center;
+                                    overflow: hidden;
+                                    margin-top: 44px;
+                                        li{
+                                        float: left;
+                                        width: 100px;
+                                        line-height: 15px;
+                                        border-left: 2px solid #EFEFEF;
+                                        cursor: pointer;
+                                         &.active {
+                                            color: #442818;
+                                            border-color: #442818;
+                                             }
+                                        }
+                                   
+                                 }//
+
+                               
+        }
+                                 .member-coupon {
+                                        padding: 20px;
+                                        .member-title {
+                                            height: 38px;
+                                            line-height: 48px;
+                                            border-bottom: 1px solid #eee;
+                                                h2{
+                                                    font-size: 20px;
+                                                        position: relative;
+                                                        float: none;
+                                                        height: 38px;
+                                                        line-height: 38px;
+                                                    color: #8c6a52;
+                                                    span{
+                                                            display: inline-block;
+                                                            position: absolute;
+                                                            top: 8px;
+                                                            right: 5px;
+                                                            padding: 0 10px;
+                                                            font-size: 12px;
+                                                            line-height: 24px;
+                                                            background: #432818;
+                                                            color: #F1BF9F;
+                                                    }
+                                                }
+                                        }
+                                    .member-mod{
+                                            .member-grid {
+                                                    width: 100%;
+                                                    border-collapse: collapse;
+                                                    border-spacing: 0;
+                                                    thead {
+                                                            border: 1px solid #ddd;
+                                                            background: #f9f9f9;
+                                                             th {
+                                                                height: 38px;
+                                                                line-height: 38px;
+                                                                font-weight: 400;
+                                                                font-size: 116.66667%;
+                                                                display: table-cell;
+                                                                 vertical-align: inherit;
+                                                                 text-align: center;
+                                                            }
+                                                        }
+                                                        tbody{
+                                                            background-color: #fcfcfc;
+                                                            width: 1200px;
+                                                                .first{
+                                                                    background-color: #fcfcfc;
+                                                                    
+                                                            
+                                                                .no-information {
+                                                                    text-align: center;
+                                                                   // background-color: #fcfcfc;
+                                                                    color: #666;
+                                                                // line-height: 5;
+                                                                    text-align: center;
+                                                                    height: 50px;
+                                                                    color: #666;
+                                                                    text-align: center;
+                                                                    padding: 10px;
+                                                                    color: #666;
+                                                                } 
+                                                            }
+                                                        }
+                                                }
+                                           }      
+                                
+                                }
+
+
+        }
