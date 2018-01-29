@@ -12,7 +12,7 @@ class Item extends React.Component{
             showGoodId : '',
             goodsDetail :{
                 type:"",
-                productsArr:[{productsArr:''}],
+                productsArr:[{productsArr:{title:'',price:''}}],
                 title:""
             },
         }
@@ -20,6 +20,13 @@ class Item extends React.Component{
 
     isChangeShowGoodID(id){
         var that = this;
+        that.setState({
+            goodsDetail :{
+                type:"",
+                productsArr:[{productsArr:{title:'',price:''}}],
+                title:""
+            },
+        })
         var form2 ={
             cityId :2,
             goodsId : id,
@@ -36,22 +43,29 @@ class Item extends React.Component{
             }
         })   
         this.setState({showGoodId:id})
-        let height = $("body").height()
-        let width =  $("body").width()
+        this.changeDom(that)
+
+    }
+    
+    changeDom(that){
+        let height = $("#root").height()
+        let width =  $("#root").width()
+        
         $(".body_mast").height(height)
         $(".body_mast").width(width)
         $(".body_mast").css({display:"block"})
+        
         $(".body_mast").on("click", function(){//关闭遮罩
             $(this).css({display:"none"})
             that.setState({showGoodId:new Date()})  
         });
     }
-
     render(){
         let {data} = this.props // 商品数据
         let num = this.props.path //显示那个类型的商品
         let id = this.props.id || "0" //
         let showGoods = [] //显示当前类型的那个口味
+        console.log( this.state.goodsDetail)
         if(id!=="0"){
             data[num-1].goods.forEach(item => {
                 let goodId = item.tag_ids.split(",")
@@ -76,7 +90,7 @@ class Item extends React.Component{
                             <div className="cake-item">
                                 <Link className="item-img">
                                     <img src={`http://static.21cake.com/${item.img_url}`} alt={item.name}/>
-                                    <h3>{item.name}</h3>
+                                    <p>{item.name}</p>
                                     <span>￥{item.price}/{item.spec}</span>
                                 </Link>
                                 <div className="label-entrance">
@@ -101,7 +115,13 @@ class Item extends React.Component{
                                 </a>
                             </div>
                             {
-                                this.state.showGoodId === item.cake_goods_id?<AddToCart spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>:''
+                                this.state.showGoodId === item.cake_goods_id ?
+
+                                    this.state.goodsDetail.length === 1 ?
+                                    '12'
+                                    :<AddToCart spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
+                                    
+                                    :''
                             }
                             
                         </li>
