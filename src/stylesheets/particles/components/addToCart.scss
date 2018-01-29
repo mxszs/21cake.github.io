@@ -1,5 +1,6 @@
 
 
+
 .add_cart{
     position: absolute;
     bottom: 0;
@@ -7,8 +8,10 @@
     width: 240px;
     background: #F8F8F8;
     padding: 12px 12px 20px 12px;
-    // display: none;
     z-index: 2000;
+    transition: all 0.5s;
+
+
     h4{
         font-size: 16px;
         font-weight: bold;
@@ -29,6 +32,9 @@
                 cursor: pointer;
                 margin: 0 12px 14px 0;
                 overflow: hidden;
+                &:nth-of-type(4n){
+                    margin-right: 0;
+                }
                 a{
                     display: block;
                     height: 28px;

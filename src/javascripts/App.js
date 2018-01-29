@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import Header from './components/header'
-
+import Footer from './components/footer/Footer' 
 class App extends Component {
   render(){
     return (
@@ -11,6 +11,7 @@ class App extends Component {
         {this.props.children}
 
         <div className="body_mast"></div>
+        <Footer/>   
       </div>
     );
   }

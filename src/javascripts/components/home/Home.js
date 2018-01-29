@@ -1,6 +1,8 @@
 
 import React from 'react'
-import Header from '../header'
+import Banner from './Banner'
+import Content from './Content'
+
 class Home extends React.Component{
     constructor(props){
         super(props)
@@ -14,15 +16,11 @@ class Home extends React.Component{
     	
         return(
             <div>
-                    <Header/>
                 <div className="main-box">
-                    <header></header>
-                    
                     <Banner/>
                     
                     <Content/>
-                    
-                    <Footer/>
+                        
                 </div>
             </div>
         )

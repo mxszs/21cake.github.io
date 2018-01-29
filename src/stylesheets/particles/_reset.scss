@@ -15,7 +15,7 @@ img,a{border:none;margin:0px;padding:0px}
 a:visited,a:link,a{color:#684029;text-decoration:none;outline:none;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
 a:hover{color:#BB9772}
 a:focus{outline:none}
-input,textarea,select{outline:none}
+input,textarea,select{outline:none;border:none}
 input[type="button"],input[type="submit"]{border:none;cursor:pointer} 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#BFBFBF}
 input:-moz-placeholder,textarea:-moz-placeholder{color:#BFBFBF}
@@ -26,4 +26,19 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#BFBFBF}
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
+}
+
+
+
+*, *::before, *::after{
+    -webkit-box-sizing: content-box;
+    box-sizing:content-box;
+}
+
+* {
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+      user-select:none;
 }

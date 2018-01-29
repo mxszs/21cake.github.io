@@ -12,25 +12,23 @@ class addToCart extends React.Component{
         }
     }
     render(){
-        let {isShow,_id,goodsDetail} = this.props
+        let {isShow,goodsDetail} = this.props
 
-        let multiply_normal=[]
+        let multiply_normal;
         if(goodsDetail.productsArr[0]){
-            for(let key in goodsDetail.productsArr[0].productsArr){
-                multiply_normal.push(goodsDetail.productsArr[0].productsArr[key])
-            }
+            multiply_normal = true
         }else{
-            multiply_normal=[]
+            multiply_normal=false
         }
         return(
             <div className={isShow? 'show add_cart':'hide add_cart'}>
             {
-                multiply_normal.length ? 
-                <Multiply spec={this.props.spec} data = {multiply_normal}/>
+                multiply_normal ? 
+                <Multiply spec={this.props.spec}  data = {goodsDetail}/>
                 :
                 <Normal spec={this.props.spec} data = {goodsDetail}/>
             }
-                <div className="btn-buy-add">
+                <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
                     <button className="btn-add">加入购物车</button>
                 </div>

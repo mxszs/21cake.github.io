@@ -55,7 +55,6 @@ class Header extends React.Component{
 
     }
     render(){
-        console.log(this.props)
         let {navs,isMine} = this.state
         let {city} = this.state
         let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
@@ -68,7 +67,7 @@ class Header extends React.Component{
                         <Link to="/mine"><img src="/images/header/user-img.png" alt="user"/></Link>
                         <ul className="user-login">
                             {users.map((item)=>(
-                                <li  onClick={item.id==4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
+                                <li  onClick={item.id===4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
                             ))}
                         </ul>
                     </div>
