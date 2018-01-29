@@ -35,9 +35,9 @@ class Login extends React.Component{
         loginHandler(data){	//登录
             this.elementsone = document.getElementsByTagName("input")[0]
             this.elementstwo = document.getElementsByTagName("input")[1]
-           
+                let str = localStorage.userInfo?JSON.parse(localStorage.userInfo):{}
                 if(this.elementsone.value&&this.elementstwo){
-                     if(this.elementsone.value===this.props.User.userInfo.phone&&this.elementstwo.value===this.props.User.userInfo.password){
+                     if(this.elementsone.value===str.phone&&this.elementstwo.value===str.password){
                         this.setState({isLogin:true})//改变状态
                         this.props.UserActions.LoginHandler(data)
                         hashHistory.push('/home')//成功后跳转home

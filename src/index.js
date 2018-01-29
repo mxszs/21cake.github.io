@@ -12,7 +12,13 @@ import Home from './javascripts/components/home/Home'
 import List from './javascripts/components/list/List'
 import DistriBution from './javascripts/components/distribution'//全国配送
 import Login from './javascripts/components/login/Login'
+import Cart from './javascripts/components/cart/Cart'
 import Mine from './javascripts/components/mine/Mine'
+import MineInfo from './javascripts/components/mine/Merber/Info'
+import MineOrder from './javascripts/components/mine/Merber/Order'
+import MineAddress from './javascripts/components/mine/Merber/Address'
+import MineCompun from './javascripts/components/mine/Merber/Compun'
+import Cardlist from './javascripts/components/mine/Merber/Cardlist'
 import Register from './javascripts/components/register/Register'
 
 
@@ -31,7 +37,16 @@ let routes = <Provider store={store}>
 			<Route path="list/:path" component={List}/>
 			<Route path="distribution" component={DistriBution}/>
 			<Route path="login" component={Login}/>
+			<Route path="cart" component={Cart}/>
+
 			<Route path="mine" component={Mine}/>
+			<Route path="mine/info" component={MineInfo}/>
+			<Route path="mine/address" component={MineAddress}/>
+			<Route path="mine/order" component={MineOrder}/>
+			<Route path="mine/compun" component={MineCompun}/>
+			<Route path="mine/cardlist" component={Cardlist}/>
+			
+			
 			<Route path="register" component={Register}/>
 			<Redirect from="*" to="home"/>
 		</Route>

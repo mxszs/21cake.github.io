@@ -28,9 +28,9 @@ class Header extends React.Component{
                 {id:8,name:"深圳"}
             ],
             users:[
-                {id:1,name:"订单管理",path:''},
-                {id:2,name:"优惠券",path:''},
-                {id:3,name:"代金卡",path:''},
+                {id:1,name:"订单管理",path:'/mine/order'},
+                {id:2,name:"优惠券",path:'/mine/compun'},
+                {id:3,name:"代金卡",path:'/mine/cardlist'},
                 {id:4,name:"退出登录",path:''},
             ]
         }
@@ -55,6 +55,7 @@ class Header extends React.Component{
 
     }
     render(){
+       // console.log(this.props)
         let {navs,isMine} = this.state
         let {city} = this.state
         let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
@@ -115,10 +116,10 @@ class Header extends React.Component{
                            
                         </div>
                             {goodNum}
-                        <a className="header-cart">
+                        <Link to='cart' className="header-cart">
                             <i></i>
                             { goodNum?<span>{goodNum}</span>:''}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </header>

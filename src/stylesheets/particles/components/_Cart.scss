@@ -1,0 +1,320 @@
+#cart_box{
+    padding-top:110px; 
+    width: 100%;
+    .cart_box{
+        width: 1200px;
+        margin:0 auto;
+       // background: red;
+        .thead-ul{
+                background: #FAFAFA;
+                font-size: 13px;
+                width: 1200px;
+                overflow: hidden;
+                line-height: 44px;
+                border: 1px solid #E1E1E1;
+                li{
+                    float: left;
+                    height: 44px;
+                    &.goods-ti{
+                            width: 285px;
+                            margin-left: 166px;
+                    }
+                    &.birthday-card-ti{
+                               width: 300px;
+                                position: relative;
+                    }
+                     &.unit-Price{
+                               width: 115px;
+                    }
+                    &.number-ti{
+                            width: 150px;
+                    }
+                    &.money-ti{
+                        width: 180px;
+                    }
+                }
+        }
+            .tbody-ul{
+                     margin-bottom: 20px;
+                    background: #fff;
+                    border: 1px solid #E1E1E1;
+                    margin-top: 20px;
+                    .table{
+                            border-color: grey;
+                                text-align: left;
+                                width: 1200px;
+                               // margin-top: 32px;
+                                font-size: 13px;
+                                padding-bottom: 24px;
+                        li{
+                            float: left;
+                            .table_tr{
+                                  padding: 0;
+                                 width: 154px;
+                                 height: 134px;
+                                 float: left;
+                                .goods_img{
+                                        width: 106px;
+                                        margin-left: 60px;
+                                        display: block;
+                                        border-bottom: 2px dashed #F1F1F1;
+                                        padding: 24px 0;
+                                        margin-bottom: -1px;
+                                        padding-right: 12px;
+                                        position: relative;
+                                             img{
+                                                height: 80px;
+                                                width: 80px;
+                                                border: 1px solid #EFEFEF;
+                                            }
+                                }
+                            }   
+                            .goods{
+                                    padding: 24px 0 23px 0 ;
+                                    border-bottom: 2px dashed #F1F1F1;
+                            }
+                            .goods_cake{
+                                float: left;
+                                width: 300px;
+                                //height: 134px;
+                                .goods_space{
+                                    font-size: 14px;
+                                     line-height: 18px;
+                                }
+                                .goods_spec{
+                                    font-size: 13px;
+                                    color: #D5BFA7;
+                                    // display: block;
+                                }
+                                .goods_laid{
+                                        display: block;
+                                        color: #CECECE;
+                                        height: 35px;
+                                        margin-top: 10px;
+                                        font-size: 12px;
+                                    i{
+                                            display: inline-block;
+                                            height: 35px;
+                                            width: 35px;
+                                            background: url(/images/header/icon.png) no-repeat;
+                                            background-position: -44px -63px;
+                                            background-size: 310px 120px;
+                                            margin-right: 5px;
+                                            margin-bottom: -6px;
+                                    }
+                                }
+                            } 
+                            .good{
+                                height: 130px;
+                                border-bottom: 2px dashed #F1F1F1;
+                                line-height: 129px;
+                            }
+                            .goods_brid{
+                                float: left;
+                                width: 300px;
+                               
+                               
+                            }
+                            .goods_price{
+                                float: left;
+                               width: 115px;
+                              
+                            }
+                            .goods_num{
+                                height: 74px;
+                                float: left;
+                                width: 150px;
+                                line-height: 0;
+                                padding-top:56px;
+                                ._num{
+                                    width: 48px;
+                                   height: 22px;
+                                    line-height: 25px;
+                                    margin-bottom: -10px;
+                                    display: inline-block;
+                                    text-align: center;
+                                    border: 1px solid #E7E7E7; 
+                                }
+                                
+                            }
+                            .goods_prices{
+                                float: left;
+                                width: 100px;
+                            }
+                             .removeGoods{
+                                float: left;
+                                width: 56px;
+                               i{
+                                       height: 12px;
+                                        width: 12px;
+                                       margin-left: 40px;
+                                        display: inline-block;
+                                        background: url(/images/header/icon.png) no-repeat;
+                                        background-position: -221px -70px;
+                                        background-size: 310px 120px;
+                                        cursor: pointer;
+                               }
+                            }
+                            
+                    }
+                        //推荐
+                        .goods_list{
+                            margin-left: 60px;
+                            padding: 15px 0;
+                            border-top: 2px solid #E0E0E0;
+                            margin-top: -1px;
+                            margin-right: 60px;
+                           // overflow: hidden;
+                                li{
+                                    float: left;
+                                    overflow: hidden;
+                                    margin-right: 25px;
+                                    padding: 12px 0;
+                                        img{
+                                            height: 80px;
+                                            width: 80px;
+                                            border: 1px solid #EFEFEF;
+                                            display: inline-block;
+                                            float: left;
+                                        }
+                                        .right-title {
+                                            float: left;
+                                            margin-left: 22px;
+                                            width: 140px;
+                                            h5{
+                                                width: 110px;
+                                                overflow: hidden;
+                                                height: 18px;
+                                            }
+                                            span{
+                                                font-size: 13px;
+                                                line-height: 18px;
+                                                color: #D5BFA7;
+                                            }
+                                            a{
+                                                display: block;
+                                                 margin-top: 20px;
+                                                 i{
+                                                    width: 24px;
+                                                    height: 24px;
+                                                    display: inline-block;
+                                                    background: url(/images/header/icon.png) no-repeat;
+                                                    background-size: 310px 120px;
+                                                    background-position: -194px -70px;
+                                                 }
+                                            }
+                                        }
+                                }
+                        }
+                }
+            }
+            //结算
+            .cart-submit {
+                position: relative;
+                width: 1078px;
+                background: #FBFBFB;
+                border: 1px solid #E1E1E1;
+                padding: 26px 60px 32px 60px;
+                margin: 20px 0;
+                .cart-submit-empty {
+                    position: absolute;
+                    top: 25px;
+                    left: 60px;
+                    display: block;
+                    font-size: 13px;
+                    i{
+                            display: inline-block;
+                            width: 18px;
+                            height: 21px;
+                            background: url(/images/header/icon.png) no-repeat;
+                            background-position: -148px -71px;
+                            background-size: 310px 120px;
+                            vertical-align: middle;
+                            margin-right: 18px;
+                            margin-bottom: 4px;
+                    }
+                }
+                .cart-total-detail{
+                    li{
+                        font-size: 13px;
+                        text-align: right;
+                        line-height: 18px;
+                        margin-bottom: 10px;
+                    }
+                }
+                 .cart-total {
+                        text-align: right;
+                        >span{
+                            display: inline-block;
+                            width: 232px;
+                            border-top: 2px solid #E2E2E2;
+                            line-height: 42px;
+                            font-size: 13px;
+                                span{
+                                    color: #FF714D;
+                                    display: inline-block;
+                                    margin-left: 4px;
+                                }
+                        }
+                    }
+                     .cart-balance {
+                        font-size: 13px;
+                        color: #D5BFA7;
+                        line-height: 18px;
+                        text-align: right;
+                        display: block;
+                    }
+                    .cart-submit-button {
+                        text-align: right;
+                            a{
+                                background: #684029;
+                                width: 232px;
+                                height: 40px;
+                                display: inline-block;
+                                color: #fff;
+                                line-height: 40px;
+                                text-align: center;
+                                font-size: 14px;
+                                margin-top: 14px;
+                            }
+                    }
+            }
+    }
+            .details-recommend {
+                margin-top: 48px;
+                width: 1200px;
+                overflow: hidden;
+                padding-bottom: 42px;
+                h2{
+                    font-size: 18px;
+                    color: #684029;
+                    line-height: 50px;
+                    border-bottom: 2px solid #CECAC7;
+                }
+                .recommend-list {
+                    width: 1264px;
+                    margin: 22px 0 0 -32px;
+                    overflow: hidden;
+                    li {
+                        max-width: 252px;
+                        margin: 0 32px;
+                        max-height: 252px;
+                        background: #eee;
+                        float: left;
+                        img {
+                                height: 252px;
+                                width: 252px;
+                            }
+                    }
+                }
+            }
+}
+.button_con{
+       width: 22px;
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #E7E7E7; 
+}

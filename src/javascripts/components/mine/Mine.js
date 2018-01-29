@@ -1,6 +1,7 @@
 
 import React from 'react'
 import MineInfo from './Mine_info'
+import Member from './member'
 class  Mine extends React.Component{
     constructor(props){
         super(props)
@@ -10,9 +11,10 @@ class  Mine extends React.Component{
     }
     render(){
         return(
-                <div id="info_swiper">
+                <div id="info_swiper" className='clear'>
                     <div className ="info_box">
                       <MineInfo></MineInfo>
+                      <Member></Member>
                     </div>
                 </div>
         )
