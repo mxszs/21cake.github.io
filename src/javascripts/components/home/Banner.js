@@ -16,13 +16,10 @@ class Banner extends React.Component{
    componentWillMount(){
     	
 		axios.get("/banner.json").then((res)=>{
-			console.log(999,res)
 			
 			this.setState({bannerImg:res.data}) 
 
-		})
-            
-            
+		}) 
     }
    componentDidUpdate(){
         new Swiper('.banner',{
@@ -49,9 +46,6 @@ class Banner extends React.Component{
 	            </div>
 	            <div className="swiper-pagination banner-pagination"></div>
 	        </div>
-            
-
-
         )
     }
 }

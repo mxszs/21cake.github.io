@@ -34,10 +34,32 @@
             line-height: 50px;
             text-align: center;
             vertical-align: middle;
+            position: relative;
+            .footer-erweima {
+                position: absolute;
+                display: block;
+                height: 120px;
+                width: 120px;
+                left: -80px;
+                margin-left: 42px;
+                bottom: 50px;
+                overflow: hidden;
+                display: none;
+                img{
+                    height: 120px;
+                    width: 120px;
+                }
+            }
             .img1{
                 width:30px;
                 height:30px;
                 margin: 10px;
+            }
+            .img1:hover + .footer-erweima{
+                display: block;
+            }
+            p:hover + .footer-erweima{
+                display: block;
             }
         }
     }
