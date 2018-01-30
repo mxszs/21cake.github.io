@@ -1,6 +1,7 @@
 
 import React from 'react'
 
+import ContentItem from './ContentItem'
 class ContentNew extends React.Component{
     constructor(props){
         super(props)
@@ -23,25 +24,8 @@ class ContentNew extends React.Component{
             	<div className='content-new-list'>
             		<ul>
             			{
-            				data?data.data[0].contents.map((item,i)=>(
-            					<li key={item.id}>
-		            				<a href={"http://www.21cake.com"+item.href}><img src={'http://www.21cake.com'+item.imageUrl} alt="" /></a>
-		        					<div>
-		        						<h5>{item.name}</h5>
-		        						<h6>{item.description}</h6>
-		        						<p>
-			        						{
-			        							item.tags.map((item,i)=>(
-			        								<span key={item.id}>{item.content}</span>
-			        							))
-			        						}
-		        						</p>
-		        						<div className='cart-info'>
-		        							<span>¥{item.default.price}/{item.default.spec}</span>
-		        							<a>加入购物车</a>
-		        						</div>
-		        					</div>
-		            			</li>
+            				data?data.contents.map((item,i)=>(
+            					<ContentItem key={item.id} item={item}/>
             				)):''
 	            			
 	            		}

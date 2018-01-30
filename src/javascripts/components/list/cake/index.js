@@ -30,16 +30,16 @@ class Cake extends React.Component{
 
     render(){
         let {data} = this.props
+        let id = this.state.id || "0"
         let arr = []
         for (const key in data.goodsArr) {
             arr.push(data.goodsArr[key])
         }
-        
         return(
             <div className="cake-box">
                 <div className="cake-top">
                     <ItemCommon data={data.cat} path={this.state.path} changePath={this.changePath.bind(this)}/>
-                    <ItemCommon goods={data.goodsArr[this.state.path?this.state.path:'1']} pathID={this.state.path} id={this.state.id} data={data.tags.fa22bf77a31700498f707fc3b9d86dff} changeId={this.changeId.bind(this)}/>
+                    <ItemCommon goods={data.goodsArr[this.state.path?this.state.path:'1']} pathID={this.state.path} id={id} data={data.tags.fa22bf77a31700498f707fc3b9d86dff} changeId={this.changeId.bind(this)}/>
                 </div>
                 <ul className="cake-list">
                     {

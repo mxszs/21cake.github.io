@@ -2,7 +2,6 @@
 import React from 'react'
 import 'swiper/dist/css/swiper.min.css'
 import Swiper from 'swiper'
-import $ from 'jquery';
 import axios from 'axios'
 
 class Banner extends React.Component{
