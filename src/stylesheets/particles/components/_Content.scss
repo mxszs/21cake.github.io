@@ -61,11 +61,15 @@
                    }
                    p{
                        color: #D5BFA7;
-                       span{
-                           border: 1px solid #D5BFA7;
-                           border-radius: 10px; 
-                           margin: 5px;
-                           padding: 0 5px;
+                       a{
+                            display: inline-block;
+                            border: 1px solid #D5BFA7;
+                            border-radius: 100px;
+                            padding: 0 6px 0 8px;
+                            color: #D5BFA7;
+                            margin: 8px 3px;
+                            line-height: 16px;
+                            font-size: 12px;
                        }
                    }
                    .cart-info{

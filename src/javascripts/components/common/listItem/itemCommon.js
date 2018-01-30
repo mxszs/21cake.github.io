@@ -35,7 +35,7 @@ class itemCommon extends React.Component{
         let {data} = this.props
 
         let path = this.props.path || ''
-        let id = this.props.id || ''
+        let id = this.props.id
         let pathID = this.props.pathID ||''
         return(
             <dl className="com-list">
@@ -47,13 +47,13 @@ class itemCommon extends React.Component{
                     >
                         {   
                             path? 
-                                data.name.length==='0'?
+                                data.name.length===0?
                                     '':
                                     data.name==='分类'?
                                         '全部分类':
                                         '全部口味':
                                 id ?
-                                    data.name.length==='0'?
+                                    data.name.length===0?
                                         '':
                                         data.name==='分类'?
                                             '全部分类':

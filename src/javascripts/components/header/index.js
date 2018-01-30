@@ -32,7 +32,8 @@ class Header extends React.Component{
                 {id:2,name:"优惠券",path:''},
                 {id:3,name:"代金卡",path:''},
                 {id:4,name:"退出登录",path:''},
-            ]
+            ],
+            cityShow:{}
         }
         this.ilss = this.ilss.bind(this)
     }
@@ -40,7 +41,7 @@ class Header extends React.Component{
     changeCity(id){
         this.state.city.forEach((item)=>{
             if(item.id === id){
-                return item
+                this.setState({cityShow:item}) 
             }
         })
     }
@@ -57,7 +58,8 @@ class Header extends React.Component{
     render(){
         let {navs,isMine} = this.state
         let {city} = this.state
-        let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
+        let cityShow = this.state.cityShow.id ? this.state.cityShow : {id:2,name:"北京"}//定位的当前城市
+        localStorage.city =  JSON.stringify(cityShow)
         let {users} = this.state
         let goodNum = '' //商品个数
        // let user = []//登录信息
@@ -102,7 +104,7 @@ class Header extends React.Component{
                                 {
                                     city.map((item)=>{
                                         if(item.id !== cityShow.id){
-                                           return  <li key={item.id}><a>{item.name}</a></li>
+                                           return  <li onClick={this.changeCity.bind(this,item.id)} key={item.id}><a>{item.name}</a></li>
                                         }else{
                                             return ''
                                         }

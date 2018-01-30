@@ -2,7 +2,6 @@
 import React from 'react'
 import 'swiper/dist/css/swiper.min.css'
 import Swiper from 'swiper'
-import $ from 'jquery';
 import axios from 'axios'
 
 class Banner extends React.Component{
@@ -16,8 +15,6 @@ class Banner extends React.Component{
    componentWillMount(){
     	
 		axios.get("/banner.json").then((res)=>{
-			console.log(999,res)
-			
 			this.setState({bannerImg:res.data}) 
 
 		})

@@ -63,41 +63,45 @@ class Item extends React.Component{
     render(){
         let {data} = this.props // 商品数据
         let num = this.props.path //显示那个类型的商品
-        let id = this.props.id || "0" //
+        let id = this.props.id || "0" //    
         let showGoods = [] //显示当前类型的那个口味
-        console.log( this.state.goodsDetail)
-        if(id!=="0"){
-            data[num-1].goods.forEach(item => {
-                let goodId = item.tag_ids.split(",")
-                let boo = goodId.some((item)=>{
-                    if(item === id){
-                        return true
-                    }else{
-                        return false
+        if(num){
+            if(id!=="0"){
+                data[num-1].goods.forEach(item => {
+                    let goodId = item.tag_ids.split(",")
+                    let boo = goodId.some((item)=>{
+                        if(item === id){
+                            return true
+                        }else{
+                            return false
+                        }
+                    })
+                    if(boo){
+                        showGoods.push(item)
                     }
-                })
-                if(boo){
-                    showGoods.push(item)
-                }
-            });
+                });
+            }else{
+                showGoods = data[num-1].goods
+            }
         }else{
-            showGoods = data[num-1].goods
+            showGoods = data
         }
+       
         return(
                 <div>
                     {showGoods.map((item,i)=>(
                         <li className="list_item" key={item.cake_goods_id}>
                             <div className="cake-item">
                                 <Link className="item-img">
-                                    <img src={`http://static.21cake.com/${item.img_url}`} alt={item.name}/>
+                                    <div><img src={`http://static.21cake.com/${item.img_url}`} alt={item.name}/></div>
                                     <p>{item.name}</p>
                                     <span>￥{item.price}/{item.spec}</span>
                                 </Link>
                                 <div className="label-entrance">
                                     {
-                                        item.tags.map((it,i)=>{
+                                         item.tags.map((it,i)=>{
                                             if(i<=2){
-                                                return <Link key={it.id}>{it.content} ></Link>
+                                                return <Link to={`gallery/${it.id}`} key={it.id}>{it.content} ></Link>
                                             }else{
                                                 return ''
                                             }
@@ -132,3 +136,4 @@ class Item extends React.Component{
     }
 }
 export default Item
+
