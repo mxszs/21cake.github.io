@@ -10,7 +10,9 @@ const CartReduce = (state=defaultState,action)=>{
 		case 'ADD_NUM':
 			new_state.cars =action.cars;
 			return new_state;
-		
+		case 'INIT_CARTS':
+			new_state.cars =action.cars;
+			return new_state;
 		default:return new_state;
 	}
 	

@@ -1,6 +1,8 @@
 
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import CartActions from '../../../../redux/ActionCreators/CartActions'
 class Multiply extends React.Component{
     constructor(props){
         super(props)
@@ -26,7 +28,7 @@ class Multiply extends React.Component{
                 showMultiply=data.productsArr[0].productsArr[key]
             }
         }
-
+        
 
         return(
             <div>
@@ -55,8 +57,16 @@ class Multiply extends React.Component{
 
                     </ul>
                 </div> 
+                <div className="btn-buy-add clear">
+                    <button className="btn-buy">立即购买</button>
+                    <button onClick={this.props.CartActions.addNumber.bind(this,{showMultiply,name:data.productsArr[0].name})}  className="btn-add">加入购物车</button>
+                </div>
             </div>
         )
     }
 }
-export default Multiply
+export default connect(state=>state,(dispatch)=>{
+    return{
+        CartActions:bindActionCreators(CartActions,dispatch)
+    }
+})(Multiply)

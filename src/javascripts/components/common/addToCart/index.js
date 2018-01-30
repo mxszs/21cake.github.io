@@ -30,10 +30,10 @@ class addToCart extends React.Component{
                 :
                 <Normal spec={this.props.spec} data = {goodsDetail}/>
             }
-                <div className="btn-buy-add clear">
+                {/* <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
-                    <button  className="btn-add">加入购物车</button>
-                </div>
+                    <button onClick={this.props.CartActions.addNumber.bind(this,goodsDetail)}  className="btn-add">加入购物车</button>
+                </div> */}
             </div>
         )
     }

@@ -3,10 +3,13 @@ import store from '../store'
 import {hashHistory} from 'react-router'
 
 const CartActions = {
-			addNumber({id,name,price,img}){	
-				let car = store.getState().CartReduce.cars
+			addNumber(mock){
+				//console.log(mock)	
+				let car = store.getState().CartReduce.cars.map(good=>good)
+				console.log(mock)
 				let isHas = car.some(item=>{
-						if(item.id===id){
+						if(item.id===mock.id){
+							console.log(item.id,mock.id,22222222222)
 							item.num++;
 							return true
 						}else{
@@ -15,10 +18,10 @@ const CartActions = {
 				})
 					if(!isHas){
 						car.push({
-							id,price,img,name,num:1
+							id:mock.id,price:mock.price,img:mock.img_url,num:1
 						})
 					}
-
+					localStorage.cars = JSON.stringify(car)
 				return (dispatch)=>{
 					dispatch({
 						type:'ADD_NUM',
@@ -26,7 +29,20 @@ const CartActions = {
 					})
 				}
 				
-			}
+				
+			},
+		initCars(){
+				let cars = localStorage.cars?JSON.parse(localStorage.cars):[]
+				console.log(cars,101011)
+				 return (dispatch)=>{
+					dispatch({
+						type:'INIT_CARTS',
+						cars:cars
+					})
+				}
+		
+	}
+	
 
 }
 
