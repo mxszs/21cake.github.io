@@ -46,6 +46,34 @@
                                // margin-top: 32px;
                                 font-size: 13px;
                                 padding-bottom: 24px;
+                        
+                    .cart-not-pro{
+                        //空空如也
+                            height: 184px;
+                            width: 1198px;
+                            padding: 83px 0 115px;
+                            margin-top: 24px;
+                                img{
+                                    display: block;
+                                    height: 116px;
+                                    width: 204px;
+                                    margin: 0 auto;
+                                }   
+                                span{
+                                    text-align: center;
+                                    font-size: 14px;
+                                    color: #D5BFA7;
+                                    display: block;
+                                    margin-top: 8px;
+                                }  
+                                a{
+                                    display: block;
+                                    width: 80px;
+                                    margin: 0 auto;
+                                    font-size: 14px;
+                                    margin-top: 20px;
+                                }
+                    }
                         li{
                             float: left;
                             .table_tr{
@@ -55,6 +83,7 @@
                                  float: left;
                                 .goods_img{
                                         width: 106px;
+                                        height: 82px;
                                         margin-left: 60px;
                                         display: block;
                                         border-bottom: 2px dashed #F1F1F1;
@@ -144,6 +173,7 @@
                              .removeGoods{
                                 float: left;
                                 width: 56px;
+                                cursor: pointer;
                                i{
                                        height: 12px;
                                         width: 12px;
@@ -161,7 +191,7 @@
                         .goods_list{
                             margin-left: 60px;
                             padding: 15px 0;
-                            border-top: 2px solid #E0E0E0;
+                            //border-top: 2px solid #E0E0E0;
                             margin-top: -1px;
                             margin-right: 60px;
                            // overflow: hidden;
@@ -310,8 +340,18 @@
             }
 }
 .button_con{
-       width: 22px;
+    width: 22px;
     border: none;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #E7E7E7; 
+}
+.button_conc{
+    width: 22px;
+    border: none;
+    color:#ddd;
     font-size: 18px;
     line-height: 22px;
     cursor: pointer;

@@ -7,11 +7,11 @@ class Normal extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            spec:this.props.spec,
-            showNormal:{}
+            spec:this.props.spec
         }
+       
     }
-    
+     
     
     changeSpec(spec){//更改磅数
         this.setState({spec:spec})
@@ -19,21 +19,19 @@ class Normal extends React.Component{
     
     render(){
        // onClick={this.props.CartActions.addNumber.bind(this,goodsDetail)}
-        let {data} = this.props
-        let {showNormal} = this.state
+        let {data,img,name} = this.props
         let normal = []
-        //let showNormal = {}
+        let showNormal = {}
         for(let key in data.productsArr){
             normal.push( data.productsArr[key])
             if(data.productsArr[key].spec === this.state.spec){
-               // showNormal=data.productsArr[key]
-                this.setState({showNormal:data.productsArr[key]})
-                console.log(showNormal,1111)
+                showNormal = data.productsArr[key]
             }
         }
-        console.log(showNormal,414141)
+        //console.log(showNormal,414141)
         return(
-           normal ?
+            <div>
+          { normal.length ?
            <div>
                 <h4>￥{showNormal.price}</h4>
                 <div className="normal con">
@@ -46,12 +44,13 @@ class Normal extends React.Component{
                     }
                     </ul>
                 </div>
-                <div className="btn-buy-add clear">
-                    <button className="btn-buy">立即购买</button>
-                     <button onClick={this.props.CartActions.addNumber.bind(null,this.state.showNormal)}  className="btn-add">加入购物车</button> 
-                </div>
             </div>
-           :''
+           :''}
+           <div className="btn-buy-add clear">
+                    <button className="btn-buy">立即购买</button>
+                    <button onClick={this.props.CartActions.addNumber.bind(null,showNormal,img,name)}  className="btn-add">加入购物车</button>
+                </div>
+        </div>
         )
     }
 }

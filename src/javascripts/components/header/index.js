@@ -60,10 +60,18 @@ class Header extends React.Component{
         let {city} = this.state
         let cityShow = this.changeCity() ? this.changeCity() :{id:2,name:"北京"}//定位的当前城市
         let {users} = this.state
-        let goodNum = '' //商品个数
+        let goodNum = 0 //商品个数
+        let {cars} = this.props.CartReduce
+            let car = localStorage.cars?JSON.parse(localStorage.cars):[]
+            cars.forEach(item=>{
+               //console.log(item.price*item.num)
+                //allprice+=parseFloat(item.price)*item.num
+                goodNum+=item.num
+            })
        // let user = []//登录信息
         let User ;
-        if(this.props.User.userLoginInfo.phone){//判断登录状态
+        let userLoginInfo =  localStorage.userLoginInfo?JSON.parse(localStorage.userLoginInfo):[]
+        if(userLoginInfo.phone){//判断登录状态
             User =  <div>
                         <Link to="/mine"><img src="/images/header/user-img.png" alt="user"/></Link>
                         <ul className="user-login">
@@ -79,7 +87,7 @@ class Header extends React.Component{
                 
             </div>
         }
-
+        
         return(
             <header>
                 <div className="header">
@@ -115,7 +123,6 @@ class Header extends React.Component{
                             {User}
                            
                         </div>
-                            {goodNum}
                         <Link to='cart' className="header-cart">
                             <i></i>
                             { goodNum?<span>{goodNum}</span>:''}

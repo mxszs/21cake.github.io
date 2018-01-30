@@ -8,7 +8,6 @@ class App extends Component {
    componentWillMount(){
 		//初始化购物车数据
                 this.props.CartActions.initCars()
-                console.log(this.props)
                 
      }
   render(){

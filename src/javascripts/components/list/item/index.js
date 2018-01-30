@@ -65,7 +65,7 @@ class Item extends React.Component{
         let num = this.props.path //显示那个类型的商品
         let id = this.props.id || "0" //
         let showGoods = [] //显示当前类型的那个口味
-        console.log( this.state.goodsDetail)
+       // console.log( this.state.goodsDetail)
         if(id!=="0"){
             data[num-1].goods.forEach(item => {
                 let goodId = item.tag_ids.split(",")
@@ -119,7 +119,7 @@ class Item extends React.Component{
 
                                     this.state.goodsDetail.length === 1 ?
                                     '12'
-                                    :<AddToCart spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
+                                    :<AddToCart name={item.name} img={item.img_url} spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
                                     
                                     :''
                             }

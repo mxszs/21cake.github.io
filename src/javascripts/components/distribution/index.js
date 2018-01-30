@@ -58,7 +58,7 @@ class DistriBution extends React.Component{
                                 <button className={item.num ? "hide" : 'show' } onClick={this.addPurchase.bind(this,item.id)} >订购</button>
                                 <div className={item.num? "showShop clear show" : 'showShop clear hide' }>
                                         <a onClick={this.reducePurchase.bind(this,item.id)}>-</a>
-                                        <input  type="text" value={item.num``}/>
+                                        <input  type="text" value={item.num}/>
                                         <a onClick={this.addPurchase.bind(this,item.id)}>+</a>
                                 </div>
                             </li>

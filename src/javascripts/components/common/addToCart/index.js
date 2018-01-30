@@ -14,8 +14,8 @@ class addToCart extends React.Component{
         }
     }
     render(){
-        let {isShow,goodsDetail} = this.props
-
+        let {isShow,goodsDetail,img,name} = this.props
+        //console.log(img,11231)
         let multiply_normal;
         if(goodsDetail.productsArr[0]){
             multiply_normal = true
@@ -26,9 +26,9 @@ class addToCart extends React.Component{
             <div className={isShow? 'show add_cart':'hide add_cart'}>
             {
                 multiply_normal ? 
-                <Multiply spec={this.props.spec}  data = {goodsDetail}/>
+                <Multiply img={img} name={name}  spec={this.props.spec}  data = {goodsDetail}/>
                 :
-                <Normal spec={this.props.spec} data = {goodsDetail}/>
+                <Normal img={img} name={name} spec={this.props.spec} data = {goodsDetail}/>
             }
                 {/* <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
