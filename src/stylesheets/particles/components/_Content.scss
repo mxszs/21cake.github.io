@@ -1,6 +1,6 @@
 
 .content{
-    height:3000px;
+    height:3100px;
     .content-nav{
         width:1120px;
         height:103px;
@@ -16,7 +16,9 @@
         width:1200px;
         height:800px;
         background: #fff;
-        margin: 0 auto;  
+        margin: 0 auto;
+        margin-top: 150px; 
+         
         h4{
             margin:50px 0 20px 50px;
             font-size: 26px;
@@ -95,41 +97,58 @@
         width:1200px;
         height:400px;
         background: #fff;
-        margin: 100px auto;  
+        margin: 0 auto;
+        margin-top: 100px;  
         h4{
             margin:50px 0 20px 50px;
             font-size: 26px;
             font-weight: 400;
             span{
                 font-size: 14px;
-                font-weight: 200;
+                font-weight: 400;
                 margin-left: 5px;
             }
         }
         .content-active-img{
-            img{
+            a{
                 width:45%;
-                border-radius: 10px;
-                
+                display: block;
+                float: left;
+                margin-left: 10px;
+                img{
+                    width:98%;
+                    border-radius: 10px;
+                    
+                }
+                img:first-child{
+                    margin:0 20px 0 50px;
+                }
             }
-            img:first-child{
-                margin:0 20px 0 50px;
-            }
+            
         }
     }
     .content-text{
         width:1200px;
         height:500px;
         background: #fff;
-        margin: 100px auto;  
+        margin: 0 auto;
+        overflow: hidden;
         h4{
             margin:50px 0 20px 50px;
             font-size: 26px;
             font-weight: 400;
             span{
                 font-size: 14px;
-                font-weight: 200;
+                font-weight: 400;
                 margin-left: 5px;
+            }
+            a{
+                font-size: 14px;
+                font-weight: 400;
+                float: right;
+                margin-right: 50px;
+                margin-top: 20px;
+                color: #8E5D43;
             }
         }
         .content-text-info{
@@ -143,6 +162,7 @@
                 border:1px solid #ccc;
                 border-radius: 10px;
                 margin-left: 20px;
+                margin-bottom: 50px;
                 img{
                     width:100%;
                     border-radius: 10px 10px 0 0;

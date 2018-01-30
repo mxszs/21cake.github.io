@@ -1,9 +1,24 @@
 
-@import './particles/_base.scss';
 @import './particles/_reset.scss';
+@import './particles/_base.scss';
 @import './particles/_common.scss';
 
+@import './particles/components/header.scss';
+@import './particles/components/list.scss';
+@import './particles/components/addToCart.scss';
+
+
+
+@import './particles/components/Register.scss';
+@import './particles/components/_Mine.scss';
+
+
+
+  
 @import './particles/components/_Home.scss';
 @import './particles/components/_Banner.scss'; 
 @import './particles/components/_Content.scss'; 
 @import './particles/components/_Footer.scss'; 
+
+@import './particles/components/_Company.scss'; 
+

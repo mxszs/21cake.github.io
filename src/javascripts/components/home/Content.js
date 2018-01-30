@@ -12,7 +12,6 @@ class Content extends React.Component{
         super(props)
         this.state = {
 			data:{
-				bannerList:[],
 				
 			}
         }
@@ -32,9 +31,9 @@ class Content extends React.Component{
             async: true,
             dataType: 'jsonp',
             success: function(data) {
-            	
-                that.setState({data:data.data[0].data}) 
-  				console.log(data)
+
+                that.setState({data:data.data})
+                
             }
             
         });
@@ -53,11 +52,11 @@ class Content extends React.Component{
                 
                 <ContentNew data={data[0]}/>
                 
-                <ContentPopul data={data[1]}/>
+                <ContentPopul data={data[0]}/>
                 
-                <ContentActive/>
+                <ContentActive data={data[1]}/>
                 
-                <ContentText/>
+                <ContentText data={data[2]}/>
             </div>
         )
     }

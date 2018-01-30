@@ -1,0 +1,97 @@
+#info_swiper{
+    width: 1349px;
+      padding-top:80px;
+    .info_box{
+        background: red;
+        min-width: 960px;
+        padding: 0 20px;
+        margin: 30px auto;
+        max-width: 1200px;
+        .edit_info{
+             float: left;
+             width: 422px;
+             height: 236px;
+             background: #f6f5f3;
+             margin: 0px 21px 0px 0px;
+             .edit_iofo_left{
+                 float: left;
+                position: relative;
+                  margin:55px 30px 0 60px;
+                    width: 120px;
+                    height: 120px;
+                    //background: red;
+                    border-radius: 50%;
+                    background: url(/register/avator-bg.png) 0 0 no-repeat;
+                    .change_head{
+                        background: url(/register/avator-photo.png) 0 0 no-repeat;
+                        display: block;
+                        background-size: 120px;
+                        width: 120px;
+                        height: 120px;
+                    }
+                    
+                    .change_head_mask{
+                         background: url(/register/head_mask.png) 0 0 no-repeat;
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         background-size: 120px;
+                        width: 120px;
+                        height: 120px;
+                        display: none;
+                    }
+                    .change_head:hover .change_head_mask{
+                            display: block;
+                    }
+                   
+             }
+                 .edit_info_right{
+                        float: left;
+                         margin-top:70px;
+                         .phone-info{
+                             font-size: 24px;
+                             line-height: 30px;
+                             color: #5f504e;
+                         }
+                            p{
+                                margin: 13px 0 17px 0;
+                                span{
+                                    color:#faaf3b; 
+                                }
+                            }
+                         ul{
+                             li{
+                                // line-height: 30px;
+                                 .edit_ico{
+                                     width: 20px;
+                                    height: 30px;
+                                    //display: block;
+                                    float: left;
+                                    margin-right: 6px;
+                                    &.person{
+                                         background: url(/register/edit-info.png) 0 0 no-repeat;
+                                    }
+                                     &.address{
+                                         background: url(/register/edit_address.png) 0 0 no-repeat;
+                                    }
+                                    &.buy{
+                                         background: url(/register/edit_order.png) 0 0 no-repeat;
+                                    }
+                                 }
+                                span{
+                                    font-size: 14px;
+                                    line-height: 10px;
+                                }
+                             }
+                         }
+                    }
+        }  
+            .cash_coupou{
+                 float: left;
+                    padding: 0px 24px;
+                     height: 236px;
+                      width: 702px;
+                    background: #f6f5f3;  
+            }              
+    }
+}

@@ -28,11 +28,16 @@ class Footer extends React.Component{
 			            <img className='img1' src='/img/footericon-01.png'alt="" />
 			        </a>
 			        <a className="footer-weixin">
-				        
 			            <img className='img1' src='/img/footericon-02.png' alt="" />
+			            <div className="footer-erweima footer-weixin-erweima">
+			                <img src="/img/erweima.png"/>
+			            </div>
 			        </a>
 			        <a className="footer-app">
-			            APP
+			            <p>APP</p>
+			            <div className="footer-erweima footer-app-erweima">
+			                <img src="/img/footer-erweima.png"/>
+			            </div>
 			        </a>
 			    </div>
 			    <div className="footer-text">

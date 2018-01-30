@@ -19,9 +19,7 @@ class Banner extends React.Component{
 			
 			this.setState({bannerImg:res.data}) 
 
-		})
-            
-            
+		}) 
     }
    componentDidUpdate(){
         new Swiper('.banner',{
@@ -48,9 +46,6 @@ class Banner extends React.Component{
 	            </div>
 	            <div className="swiper-pagination banner-pagination"></div>
 	        </div>
-            
-
-
         )
     }
 }

@@ -1,0 +1,119 @@
+
+
+.cake-box{
+    width: 1200px;
+    margin: 0 auto;
+    .cake-top{
+        font-size: 13px;
+        margin-top: 25px;
+        margin-bottom: 35px;
+        width: 1200px;
+        border-top: #f2f2f2 solid 1px;
+        border-bottom: #f2f2f2 solid 1px;
+        overflow: hidden;
+        padding: 8px 0;
+    }
+    .cake-list{
+        overflow: hidden;
+        .cake-item-title{
+            // 全部分类时显示
+            
+            text-align: center;
+            padding: 45px 0;
+            &:first-child{
+                padding-top: 10px;
+            }
+            h2{
+                padding: 0 15px;
+                display: inline-block;
+                text-align: left;
+                border-left: 2px solid #684029;
+                font-size: 20px;
+                line-height: 20px;
+                span{
+                    line-height: 20px;
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+        }
+        .list_item{
+            float: left;
+            padding: 0 18px;
+            margin: 0 18px;
+            position: relative;
+            overflow: hidden;
+            .cake-item{
+                width: 228px;
+                text-align: center;
+                height: 364px;
+                position: relative;
+                .item-img{
+                    display: block;
+                    img{
+                        width: 228px;
+                        height: 246px;
+                    }
+                    h3{
+                        font-size: 13px;
+                        line-height: 20px
+                    }
+                    span{
+                        display: block;
+                        color: #BB9772;
+                        line-height: 18px;
+                        margin-top: 5px;
+                        font-size: 13px;
+                    }
+                }
+                .label-entrance{
+                    a{
+                        display: inline-block;
+                        border: 1px solid #D5BFA7;
+                        border-radius: 100px;
+                        padding: 0 6px 0 8px;
+                        color: #D5BFA7;
+                        margin: 8px 3px;
+                    }
+                }
+                .label{
+                    text-align: left;
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                    width: 100%;
+                    img{
+                        width: 65px;
+                        height: 23px;
+                    }
+                }
+                .addCart{
+                    position: absolute;
+                    top: 315px;
+                    display: inline-block;
+                    width: 107px;
+                    left: 60px;
+                    line-height: 28px;
+                    margin-top: 12px;
+                    background: none;
+                    font-size: 13px;
+                    i{
+                        display: inline-block;
+                        vertical-align: middle;
+                        background: url(/images/header/icon.png) no-repeat;
+                        background-position: -216px -40px;
+                        background-size: 310px 120px;
+                        height: 28px;
+                        width: 28px;
+                        margin-right: 2px;
+                    }
+                    &:hover{
+                        i{
+                            background-position: -250px -72px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

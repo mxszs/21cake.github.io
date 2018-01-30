@@ -1,7 +1,7 @@
 
 import React from 'react'
-
-class Mine extends React.Component{
+import MineInfo from './Mine_info'
+class  Mine extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -10,10 +10,13 @@ class Mine extends React.Component{
     }
     render(){
         return(
-            <div>
-                Mine
-            </div>
+                <div id="info_swiper">
+                    <div className ="info_box">
+                      <MineInfo></MineInfo>
+                    </div>
+                </div>
         )
     }
 }
 export default Mine
+
