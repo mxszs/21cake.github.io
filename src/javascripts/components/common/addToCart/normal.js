@@ -1,31 +1,37 @@
 
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import CartActions from '../../../../redux/ActionCreators/CartActions'
 class Normal extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             spec:this.props.spec
         }
+       
     }
-    
+     
     
     changeSpec(spec){//更改磅数
         this.setState({spec:spec})
     }
     
     render(){
-        let {data} = this.props
+       // onClick={this.props.CartActions.addNumber.bind(this,goodsDetail)}
+        let {data,img,name} = this.props
         let normal = []
         let showNormal = {}
         for(let key in data.productsArr){
             normal.push( data.productsArr[key])
             if(data.productsArr[key].spec === this.state.spec){
-                showNormal=data.productsArr[key]
+                showNormal = data.productsArr[key]
             }
         }
+        //console.log(showNormal,414141)
         return(
-           normal ?
+            <div>
+          { normal.length ?
            <div>
                 <h4>￥{showNormal.price}</h4>
                 <div className="normal con">
@@ -39,8 +45,18 @@ class Normal extends React.Component{
                     </ul>
                 </div>
             </div>
-           :''
+           :''}
+           <div className="btn-buy-add clear">
+                    <button className="btn-buy">立即购买</button>
+                    <button onClick={this.props.CartActions.addNumber.bind(null,showNormal,img,name)}  className="btn-add">加入购物车</button>
+                </div>
+        </div>
         )
     }
 }
-export default Normal
+
+export default connect(state=>state,(dispatch)=>{
+    return{
+        CartActions:bindActionCreators(CartActions,dispatch)
+    }
+})(Normal)

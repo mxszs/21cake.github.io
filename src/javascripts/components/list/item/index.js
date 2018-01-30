@@ -123,7 +123,7 @@ class Item extends React.Component{
 
                                     this.state.goodsDetail.length === 1 ?
                                     '12'
-                                    :<AddToCart spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
+                                    :<AddToCart name={item.name} img={item.img_url} spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
                                     
                                     :''
                             }

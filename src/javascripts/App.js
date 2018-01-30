@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import Footer from './components/footer/Footer'
-
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import CartActions from '../redux/ActionCreators/CartActions'
 import Header from './components/header'
 class App extends Component {
+   componentWillMount(){
+		//初始化购物车数据
+                this.props.CartActions.initCars()
+                
+     }
   render(){
     return (
       <div> 
@@ -16,4 +23,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(state=>state,(dispatch)=>{
+  return {
+    CartActions:bindActionCreators(CartActions,dispatch)
+  }
+})(App);
