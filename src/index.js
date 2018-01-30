@@ -20,7 +20,7 @@ import MineAddress from './javascripts/components/mine/Merber/Address'
 import MineCompun from './javascripts/components/mine/Merber/Compun'
 import Cardlist from './javascripts/components/mine/Merber/Cardlist'
 import Register from './javascripts/components/register/Register'
-
+import Company from './javascripts/components/company/Company'
 
 
 import registerServiceWorker from './registerServiceWorker';
@@ -48,6 +48,7 @@ let routes = <Provider store={store}>
 			
 			
 			<Route path="register" component={Register}/>
+			<Route path="company" component={Company}/>
 			<Redirect from="*" to="home"/>
 		</Route>
 	</Router>

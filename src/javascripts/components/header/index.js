@@ -15,7 +15,7 @@ class Header extends React.Component{
                 {id:3,type:"冰淇淋",path:"list/2"},
                 {id:4,type:"小切块",path:"list/3"},
                 {id:5,type:"全国配送",path:"/distribution"},
-                {id:6,type:"企业专区",path:""} 
+                {id:6,type:"企业专区",path:"/company"} 
             ],
             city:[
                 {id:1,name:"上海"},
@@ -74,10 +74,10 @@ class Header extends React.Component{
                     </div>
         }else{
             User =  <div>
-                        <Link to="login">登录</Link>/
-                        <Link to="register">注册</Link>
-                        
-                    </div>
+                <Link to="login">登录</Link>/
+                <Link to="register">注册</Link>
+                
+            </div>
         }
 
         return(
