@@ -25,7 +25,7 @@ class ContentPopul extends React.Component{
             	<div className='content-new-list'>
             		<ul>
             			{
-            				data?data.contents.map((item,i)=>(
+            				data?data.data[0].contents.map((item,i)=>(
             					<ContentItem key={item.id} item={item}/>
             				)):''
 	            			

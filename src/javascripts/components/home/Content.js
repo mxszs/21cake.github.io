@@ -31,15 +31,14 @@ class Content extends React.Component{
             async: true,
             dataType: 'jsonp',
             success: function(data) {
-
-                that.setState({data:data.data})
-                
+                that.setState({data:data.data}) 
             }
             
         });
     }
     render(){
-    	let {data} = this.state
+        let {data} = this.state
+        console.log(data,134454)
         return(
             <div className="content">
             	<div className='content-nav'>
@@ -50,9 +49,9 @@ class Content extends React.Component{
             
             	</div>
                 
-                <ContentNew data={data[0]}/>
+                 <ContentNew data={data[0]}/> 
                 
-                <ContentPopul data={data[0]}/>
+                 <ContentPopul data={data[0]}/> 
                 
                 <ContentActive data={data[1]}/>
                 
