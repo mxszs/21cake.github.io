@@ -19,7 +19,7 @@ class Normal extends React.Component{
     
     render(){
        // onClick={this.props.CartActions.addNumber.bind(this,goodsDetail)}
-        let {data,img,name} = this.props
+        let {data,img,name,_id} = this.props
         let normal = []
         let showNormal = {}
         for(let key in data.productsArr){
@@ -28,7 +28,7 @@ class Normal extends React.Component{
                 showNormal = data.productsArr[key]
             }
         }
-        //console.log(showNormal,414141)
+        //console.log(_id,414141)
         return(
             <div>
           { normal.length ?
@@ -48,7 +48,7 @@ class Normal extends React.Component{
            :''}
            <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
-                    <button onClick={this.props.CartActions.addNumber.bind(null,showNormal,img,name)}  className="btn-add">加入购物车</button>
+                    <button onClick={this.props.CartActions.addNumber.bind(null,showNormal,img,name,_id)}  className="btn-add">加入购物车</button>
                 </div>
         </div>
         )
