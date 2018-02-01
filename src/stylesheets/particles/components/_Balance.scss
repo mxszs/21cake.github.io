@@ -1,0 +1,96 @@
+.delivery-info{
+        .delivery-info-title {
+            height: 44px;
+            width: 1164px;
+            background: #FAFAFA;
+            border: 1px solid #E1E1E1;
+            line-height: 44px;
+            padding-left: 34px;
+            font-size: 13px;
+            margin-top: 28px;
+    }
+    .delivery-info-content {
+        margin-bottom: 30px;
+        padding: 30px 55px 40px 34px;
+        border: 1px solid #E1E1E1;
+        margin-top: 8px;
+         .cart-address-button {
+                background: #FDFDFD;
+                border: 1px dashed #E4E4E4;
+                height: 75px;
+                line-height: 75px;
+                width: 100%;
+                margin-top: 10px;
+                color: #684029;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+                i {
+                    display: inline-block;
+                    height: 24px;
+                    width: 24px;
+                    vertical-align: middle;
+                    background: url(/images/header/icon.png) no-repeat;
+                    background-position: -286px -96px;
+                    background-size: 310px 120px;
+                    margin-right: 15px;
+                }
+            }
+            .delivery-time {
+                margin-top: 25px;
+                 span {
+                    display: inline-block;
+                    line-height: 18px;
+                    padding: 11px 0;
+                    &:first-child {
+                        margin-right: 24px;
+                        color: #B3B3B3;
+                    }
+                    &:last-child {
+                            margin-left: 24px;
+                            color: #D5BFA7;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                        }
+                }
+                input {
+                    margin-right: 5px;
+                    height: 38px;
+                    border: 1px solid #E1E1E1;
+                    text-align: center;
+                    font-size: 14px;
+                    width: 160px;
+                    outline: none;
+                    &#ship-date {
+                        color: #684029;
+                    }
+                }
+                #ship-time-scop {
+                        color: #B3B3B3;
+                        height: 40px;
+                        background: #FFF;
+                        border: 1px solid #E1E1E1;
+                        width: 128px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-top: -3px;
+                        font-size: 14px;
+                    }
+            }
+                .delivery-mode {
+                    margin-top: 12px;
+                    span{
+                            margin-right: 24px;
+                             color: #B3B3B3;
+                    }
+                            label{
+                                cursor: pointer;
+                            }
+                            input:last-child {
+                            margin-left: 25px;
+                        }
+                }
+    }
+}

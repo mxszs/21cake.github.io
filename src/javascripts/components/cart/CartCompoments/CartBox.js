@@ -20,6 +20,7 @@ class CartBox extends React.Component {
 
     
     render(){
+        let {isShow} = this.props
         let {cars} = this.props.CartReduce
         let car = localStorage.cars?JSON.parse(localStorage.cars):[]
         //console.log(cars,23434)
@@ -55,14 +56,14 @@ class CartBox extends React.Component {
                                     <div className='goods_brid good'></div>
                                     <div className="goods_price good">¥{item.price}</div>
                                     <div className="goods_num good">
-                                       <button onClick={this.props.CartActions.reduceGood.bind(null,{id:item.id,spec:item.spec})} className={item.num===1?'button_conc':'button_con'}>-</button>
-                                       <span className='_num'>{item.num}</span>
-                                       <button className='button_con' onClick={this.props.CartActions.addNumber.bind(null,{id:item.id,spec:item.spec})}>+</button>
+                                       {isShow?'':<button onClick={this.props.CartActions.reduceGood.bind(null,{id:item.id,spec:item.spec})} className={item.num===1?'button_conc':'button_con'}>-</button>}
+                                      <span style={{border:isShow?'none':''}} className='_num'>{item.num}</span>
+                                      {isShow?'': <button className='button_con' onClick={this.props.CartActions.addNumber.bind(null,{id:item.id,spec:item.spec})}>+</button>}
                                     </div>
                                     <div className='goods_prices good'>
-                                            <span>¥{item.price*item.num}</span>
+                                            <span style={{color:isShow?'red':''}}>¥{item.price*item.num}.00</span>
                                     </div>
-                                    <span onClick={this.props.CartActions.removeGood.bind(null,{id:item.id,spec:item.spec})} className='removeGoods good'><i ></i></span>
+                                    {isShow?'':<span onClick={this.props.CartActions.removeGood.bind(null,{id:item.id,spec:item.spec})} className='removeGoods good'><i ></i></span>}
                                 </li>)):''
                                 }
                                 <ul className='goods_list'>
