@@ -7,37 +7,45 @@ class Cart extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            data:[],
-            box:[]
+            data: [],
+            box: []
         }
     }
     render() {
-        let {data,box} = this.state
+        let { data, box } = this.state
         return (
             <div id='cart_box'>
-                        <div className="cart_box">
-                            <CartBox box={box}></CartBox>
-                            <CartSubmit></CartSubmit>
-                            <Recommend data={data}></Recommend>
-                        </div>
-                   </div>
-                    )
-            }
-        componentWillMount(){
-            let that = this
-            $.ajax({
-                type:'GET',
-                url:'http://api.21cake.com/?method=Advertisement.show&v=1.0&cityId%5Bregion_id%5D=22&channel=pc&position=cart_bottom%2Ccart_banner%2Ccart_suggest',
-                async: true,
-                dataType: 'jsonp',
-                success(data){
-                    if(data.status === 'ok'){
-                       // console.log(data)
-                        that.setState({data:data.data.cart_bottom})
-                        that.setState({box:data.data.cart_suggest})
-                    }
+                <div className="cart_box">
+                    <CartBox box={box}></CartBox>
+                    <CartSubmit></CartSubmit>
+                    <Recommend data={data}></Recommend>
+                </div>
+            </div>
+        )
+    }
+    componentWillMount() {
+        let that = this
+        $.ajax({
+            type: 'GET',
+            url: 'http://api.21cake.com/?method=Advertisement.show&v=1.0&cityId%5Bregion_id%5D=22&channel=pc&position=cart_bottom%2Ccart_banner%2Ccart_suggest',
+            async: true,
+            dataType: 'jsonp',
+            success(data) {
+                if (data.status === 'ok') {
+                    // console.log(data)
+                    that.setState({ data: data.data.cart_bottom })
+                    that.setState({ box: data.data.cart_suggest })
                 }
-            })
+            }
+        })
+    }
+
+    componentWillReceiveProps(nextProps){
+
+        //当路由切换时
+        if(this.props.location !== nextProps.location){
+            window.scrollTo(0,0)
         }
+    }
 }
 export default Cart

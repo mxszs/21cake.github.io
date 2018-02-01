@@ -11,7 +11,7 @@ class ContentNew extends React.Component{
     render(){
       			
     let {data} = this.props
-    
+    console.log(data)
         return(
             <div className='content-new'>
             	<h4>{data?data.data[0].title:''}<span>/{data?data.data[0].subTitle:''}</span></h4>
@@ -24,10 +24,9 @@ class ContentNew extends React.Component{
             	<div className='content-new-list'>
             		<ul>
             			{
-            				data?data.contents.map((item,i)=>(
+            				data?data.data[0].contents.map((item,i)=>(
             					<ContentItem key={item.id} item={item}/>
             				)):''
-	            			
 	            		}
 
             		</ul>

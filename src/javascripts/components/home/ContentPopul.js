@@ -12,7 +12,6 @@ class ContentPopul extends React.Component{
    render(){
     
     let {data} = this.props
-	console.log(data?data.data[1]:'')
         return(
             <div className='content-new'>
             	<h4>{data?data.data[1].title:''}<span>/{data?data.data[1].subTitle:''}</span></h4>
@@ -25,7 +24,7 @@ class ContentPopul extends React.Component{
             	<div className='content-new-list'>
             		<ul>
             			{
-            				data?data.contents.map((item,i)=>(
+            				data?data.data[1].contents.map((item,i)=>(
             					<ContentItem key={item.id} item={item}/>
             				)):''
 	            			

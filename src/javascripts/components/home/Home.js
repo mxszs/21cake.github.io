@@ -11,7 +11,13 @@ class Home extends React.Component{
         }
     }
     
-    
+    componentWillReceiveProps(nextProps){
+
+        //当路由切换时
+        if(this.props.location !== nextProps.location){
+            window.scrollTo(0,0)
+        }
+    }
     render(){
     	
         return(

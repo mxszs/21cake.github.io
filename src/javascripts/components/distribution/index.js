@@ -34,7 +34,13 @@ class DistriBution extends React.Component{
         })
         this.setState({data:data})
     }
+    componentWillReceiveProps(nextProps){
 
+        //当路由切换时
+        if(this.props.location !== nextProps.location){
+            window.scrollTo(0,0)
+        }
+    }
     render(){
         console.log(this.state.data)
 
@@ -42,7 +48,7 @@ class DistriBution extends React.Component{
         this.state.data.forEach((item)=>{
             showFrom += item.num
         })
-
+        
         return(
             <div className="section-box distriBution">
                 <div className="db-banner"></div>
