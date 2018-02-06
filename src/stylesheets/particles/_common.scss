@@ -38,10 +38,11 @@
     display: none;
 }
 
-
-// #root{
-//     height: 100%;
-//     >div{
-//         height: 100%;
-//     }
-// }
+.body_mast{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background:transparent;
+}

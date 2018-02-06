@@ -4,7 +4,6 @@ import {hashHistory} from 'react-router'
 
 const CartActions = {
 			addNumber({id,price,img_url,spec},img,name){
-				console.log(id,'actions')	
 				let car = store.getState().CartReduce.cars.map(good=>good)
 				let isHas = car.some(item=>{
 						if(item.id===id&&item.spec===spec){

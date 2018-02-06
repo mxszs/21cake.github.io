@@ -16,11 +16,14 @@ class Multiply extends React.Component{
         this.setState({spec:spec})
     }
 
-  
-
+    // 加入购物车
+    addToCart(showMultiply,img,name){
+        this.props.CartActions.addNumber(showMultiply,img,name)
+        //点击加入购物车后
+        this.props.addToCartSccess()
+    }
     render(){
         let {data,img,name} = this.props
-        console.log(img,123111)
         let multiply = []
         let showMultiply={}
         for(let key in data.productsArr[0].productsArr){
@@ -29,9 +32,6 @@ class Multiply extends React.Component{
                showMultiply=data.productsArr[0].productsArr[key]
             }
         }
-       // console.log(showMultiply,11111111)
-        
-
         return(
             <div>
                  <h4>￥{showMultiply.price}</h4>
@@ -55,13 +55,11 @@ class Multiply extends React.Component{
                                 <li key={i}><a onClick={this.changeSpec.bind(this,item.spec)}  className={showMultiply.spec === item.spec?"activer":''}>{item.spec}<i></i></a></li>               
                             ))
                         }
-
-
                     </ul>
                 </div> 
                 <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
-                    <button onClick={this.props.CartActions.addNumber.bind(null,showMultiply,img,name)} className="btn-add">加入购物车</button>
+                    <button onClick={this.addToCart.bind(this,showMultiply,img,name)} className="btn-add">加入购物车</button>
                 </div>
             </div>
         )
