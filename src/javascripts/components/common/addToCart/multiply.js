@@ -23,7 +23,9 @@ class Multiply extends React.Component{
         this.props.addToCartSccess()
     }
     render(){
-        let {data,img,name} = this.props
+        let {data,img,name,_id} = this.props 
+        //console.log(data,11111111)
+       // console.log(img,123111)
         let multiply = []
         let showMultiply={}
         for(let key in data.productsArr[0].productsArr){
@@ -32,6 +34,9 @@ class Multiply extends React.Component{
                showMultiply=data.productsArr[0].productsArr[key]
             }
         }
+        
+        
+
         return(
             <div>
                  <h4>￥{showMultiply.price}</h4>
@@ -59,7 +64,7 @@ class Multiply extends React.Component{
                 </div> 
                 <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
-                    <button onClick={this.addToCart.bind(this,showMultiply,img,name)} className="btn-add">加入购物车</button>
+                    <button onClick={this.props.CartActions.addNumber.bind(null,showMultiply,img,name,_id)} className="btn-add">加入购物车</button>
                 </div>
             </div>
         )

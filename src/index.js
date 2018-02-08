@@ -14,6 +14,7 @@ import Gallery from './javascripts/components/listGallery'
 import DistriBution from './javascripts/components/distribution'//全国配送
 import Login from './javascripts/components/login/Login'
 import Cart from './javascripts/components/cart/Cart'
+import Balance from './javascripts/components/balance/Balance'
 import Mine from './javascripts/components/mine/Mine'
 import MineInfo from './javascripts/components/mine/Merber/Info'
 import MineOrder from './javascripts/components/mine/Merber/Order'
@@ -51,7 +52,8 @@ let routes = <Provider store={store}>
 			<Route path="mine/order" component={MineOrder}/>
 			<Route path="mine/compun" component={MineCompun}/>
 			<Route path="mine/cardlist" component={Cardlist}/>
-
+			{/* 结算 */}
+			<Route path="balance" component={Balance}/>
 			{/* 注册 */}
 			<Route path="register" component={Register}/>
 			<Route path="company" component={Company}/>

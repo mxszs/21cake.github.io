@@ -99,6 +99,7 @@
                                 }
                             }   
                             .goods{
+                                    height: 83px;
                                     padding: 24px 0 23px 0 ;
                                     border-bottom: 2px dashed #F1F1F1;
                             }
@@ -252,6 +253,7 @@
                     left: 60px;
                     display: block;
                     font-size: 13px;
+                    cursor: pointer;
                     i{
                             display: inline-block;
                             width: 18px;

@@ -39,7 +39,7 @@ class Gallery extends React.Component{
         }
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.params.id != this.props.params.id) {
+        if (nextProps.params.id !== this.props.params.id) {
             this.ajaxData(nextProps.params.id);
         } 
      }
@@ -69,7 +69,7 @@ class Gallery extends React.Component{
         });
         
         this.state.topData.forEach((item)=>{
-            if(item.id == id){
+            if(item.id === id){
                 that.setState({showDate:item})
             }
         })

@@ -129,9 +129,11 @@ class Item extends React.Component{
                             </div>
                             {
                                 this.state.showGoodId === item.cake_goods_id ?
-                                    this.state.isShow ?
-                                        <AddToCart isAddSucceed={this.isAddSucceed.bind(this)} name={item.name} img={item.img_url} spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow={this.state.isShow}/>
-                                        :<AddToCartSucceed isShow={!this.state.isShow}/>
+
+                                    this.state.goodsDetail.length === 1 ?
+                                    '12'
+                                    :<AddToCart _id={item.cake_goods_id} name={item.name} img={item.img_url} spec={item.spec} goodsDetail={this.state.goodsDetail} _id={this.state.showGoodId} isShow="true"/>
+                                    
                                     :''
                             }
                             

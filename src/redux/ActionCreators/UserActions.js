@@ -1,6 +1,6 @@
 
 
-import {hashHistory} from 'react-router'
+//import {hashHistory} from 'react-router'
 
 const UserActions = {
 	registerHandler(data){
