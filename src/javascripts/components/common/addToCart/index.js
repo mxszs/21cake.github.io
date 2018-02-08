@@ -13,6 +13,23 @@ class addToCart extends React.Component{
             
         }
     }
+    componentDidMount(){
+        let num = -70;
+        var timer = setInterval(()=>{
+            if(this.refs.add_cart){
+                this.refs.add_cart.style.bottom = num + "%"
+            }
+            num++
+            if(num >= 0){
+                clearInterval(timer)
+            }
+        },10)
+    }
+    //点击加入购物车后
+    addToCartSccess(){
+        this.props.isAddSucceed()
+    }
+
     render(){
         let {isShow,goodsDetail,img,name} = this.props
         //console.log(img,11231)
@@ -23,17 +40,13 @@ class addToCart extends React.Component{
             multiply_normal=false
         }
         return(
-            <div className={isShow? 'show add_cart':'hide add_cart'}>
+            <div ref="add_cart" className={isShow? 'show add_cart':'hide add_cart'}>
             {
                 multiply_normal ? 
-                <Multiply img={img} name={name}  spec={this.props.spec}  data = {goodsDetail}/>
+                <Multiply addToCartSccess={this.addToCartSccess.bind(this)}  img={img} name={name}  spec={this.props.spec}  data = {goodsDetail}/>
                 :
-                <Normal img={img} name={name} spec={this.props.spec} data = {goodsDetail}/>
+                <Normal addToCartSccess={this.addToCartSccess.bind(this)} img={img} name={name} spec={this.props.spec} data = {goodsDetail}/>
             }
-                {/* <div className="btn-buy-add clear">
-                    <button className="btn-buy">立即购买</button>
-                    <button onClick={this.props.CartActions.addNumber.bind(this,goodsDetail)}  className="btn-add">加入购物车</button>
-                </div> */}
             </div>
         )
     }

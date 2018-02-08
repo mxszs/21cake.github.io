@@ -1,8 +1,11 @@
 
 import React from 'react'
+
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import CartActions from '../../../../redux/ActionCreators/CartActions'
+
+
 class Normal extends React.Component{
     constructor(props){
         super(props)
@@ -15,6 +18,12 @@ class Normal extends React.Component{
     
     changeSpec(spec){//更改磅数
         this.setState({spec:spec})
+    }
+    
+    addToCartSccess(showNormal,img,name){
+        this.props.CartActions.addNumber(showNormal,img,name)
+        //点击加入购物车后
+        this.props.addToCartSccess()
     }
     
     render(){
@@ -48,7 +57,7 @@ class Normal extends React.Component{
            :''}
            <div className="btn-buy-add clear">
                     <button className="btn-buy">立即购买</button>
-                    <button onClick={this.props.CartActions.addNumber.bind(null,showNormal,img,name)}  className="btn-add">加入购物车</button>
+                    <button onClick={this.addToCartSccess.bind(this,showNormal,img,name)}  className="btn-add">加入购物车</button>
                 </div>
         </div>
         )

@@ -23,12 +23,11 @@ class ContentNew extends React.Component{
             	</div>
             	<div className='content-new-list'>
             		<ul>
-            			 {
+            			{
             				data?data.data[0].contents.map((item,i)=>(
             					<ContentItem key={item.id} item={item}/>
             				)):''
-	            			
-	            		} 
+	            		}
 
             		</ul>
             	</div>

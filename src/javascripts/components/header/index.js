@@ -17,33 +17,28 @@ class Header extends React.Component{
                 {id:5,type:"全国配送",path:"/distribution"},
                 {id:6,type:"企业专区",path:"/company"} 
             ],
-            city:[
-                {id:1,name:"上海"},
-                {id:2,name:"北京"},
-                {id:3,name:"天津"},
-                {id:4,name:"杭州"},
-                {id:5,name:"无锡"},
-                {id:6,name:"苏州"},
-                {id:7,name:"广州"},
-                {id:8,name:"深圳"}
-            ],
+            
             users:[
                 {id:1,name:"订单管理",path:'/mine/order'},
                 {id:2,name:"优惠券",path:'/mine/compun'},
                 {id:3,name:"代金卡",path:'/mine/cardlist'},
                 {id:4,name:"退出登录",path:''},
             ],
-            cityShow:{}
         }
         this.ilss = this.ilss.bind(this)
     }
-
-    changeCity(id){
-        this.state.city.forEach((item)=>{
-            if(item.id === id){
-                this.setState({cityShow:item}) 
-            }
-        })
+    changeCity(type){
+        this.props.changeCity(type) 
+        //点击选择城市后 让其隐藏
+        this.refs.changeCity.style.paddingBottom = 0
+        this.refs.changeCity.style.height = 0
+        this.refs.changeCity.style.paddingTop = 0
+        let that = this
+        setTimeout(() => {
+            this.refs.changeCity.style.paddingTop = ''
+            this.refs.changeCity.style.height = ''
+            this.refs.changeCity.style.paddingBottom = ''
+        },510);
     }
 
     // shouldComponentUpdate(nextProps, nextState) {
@@ -53,35 +48,35 @@ class Header extends React.Component{
     // }
     ilss(){//调用actions中的方法
         this.props.UserActions.logoutHandler() 
-
     }
     render(){
        // console.log(this.props)
         let {navs,isMine} = this.state
-        let {city} = this.state
-        let cityShow = this.state.cityShow.id ? this.state.cityShow : {id:2,name:"北京"}//定位的当前城市
-        localStorage.city =  JSON.stringify(cityShow)
+        let {city} = this.props
+        let cityShow = this.props.showCity
+        
         let {users} = this.state
         let goodNum = 0 //商品个数
         let {cars} = this.props.CartReduce
-            let car = localStorage.cars?JSON.parse(localStorage.cars):[]
-            cars.forEach(item=>{
-               //console.log(item.price*item.num)
-                //allprice+=parseFloat(item.price)*item.num
-                goodNum+=item.num
-            })
+        let car = localStorage.cars?JSON.parse(localStorage.cars):[]
+        cars.forEach(item=>{
+            //console.log(item.price*item.num)
+            //allprice+=parseFloat(item.price)*item.num
+            goodNum+=item.num
+        })
        // let user = []//登录信息
         let User ;
         let userLoginInfo =  localStorage.userLoginInfo?JSON.parse(localStorage.userLoginInfo):[]
         if(userLoginInfo.phone){//判断登录状态
-            User =  <div>
-                        <Link to="/mine"><img src="/images/header/user-img.png" alt="user"/></Link>
-                        <ul className="user-login">
-                            {users.map((item)=>(
-                                <li  onClick={item.id===4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
-                            ))}
-                        </ul>
-                    </div>
+            User =  
+            <div>
+                <Link to="/mine"><img src="/images/header/user-img.png" alt="user"/></Link>
+                <ul className="user-login">
+                    {users.map((item)=>(
+                        <li  onClick={item.id===4?this.ilss:''}  key={item.id}><Link  to={item.path} key={item.id}>{item.name}</Link></li>
+                    ))}
+                </ul>
+            </div>
         }else{
             User =  <div>
                 <Link to="login">登录</Link>/
@@ -109,11 +104,11 @@ class Header extends React.Component{
                             <span className="header-app"></span>                            
                         </div>
                         <div className="header-city">{cityShow.name}<i></i>
-                            <ul className="city">
+                            <ul className="city" ref="changeCity">
                                 {
                                     city.map((item)=>{
                                         if(item.id !== cityShow.id){
-                                           return  <li onClick={this.changeCity.bind(this,item.id)} key={item.id}><a>{item.name}</a></li>
+                                            return  <li  onClick={this.changeCity.bind(this,{id:item.id,name:item.name})} key={item.id}><a>{item.name}</a></li>
                                         }else{
                                             return ''
                                         }
@@ -123,7 +118,6 @@ class Header extends React.Component{
                         </div>
                         <div className="header-login">
                             {User}
-                           
                         </div>
                         <Link to='cart' className="header-cart">
                             <i></i>

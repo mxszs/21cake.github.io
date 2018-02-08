@@ -17,13 +17,10 @@
         overflow: hidden;
         .cake-item-title{
             // 全部分类时显示
-            
             text-align: center;
             padding: 45px 0;
-            &:first-child{
-                padding-top: 10px;
-            }
             h2{
+                color: #684029;
                 padding: 0 15px;
                 display: inline-block;
                 text-align: left;
@@ -31,11 +28,15 @@
                 font-size: 20px;
                 line-height: 20px;
                 span{
+                    
                     line-height: 20px;
                     display: block;
                     font-size: 12px;
                 }
             }
+        }
+        .cake-item-title1{
+            padding: 10px 0 45px;
         }
         
     }
@@ -71,7 +72,8 @@
             
             p{
                 font-size: 13px;
-                line-height: 20px
+                line-height: 20px;
+                margin-top: 5px;
             }
             span{
                 display: block;

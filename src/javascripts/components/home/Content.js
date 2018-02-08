@@ -11,9 +11,9 @@ class Content extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-			data:{
-				
-			}
+                data:[
+                   
+                ]
         }
     }
     componentWillMount(){
@@ -38,7 +38,6 @@ class Content extends React.Component{
     }
     render(){
         let {data} = this.state
-        console.log(data,134454)
         return(
             <div className="content">
             	<div className='content-nav'>
@@ -55,7 +54,7 @@ class Content extends React.Component{
                 
                 <ContentActive data={data[1]}/>
                 
-                <ContentText data={data[2]}/>
+                <ContentText data={data[2]}/> 
             </div>
         )
     }

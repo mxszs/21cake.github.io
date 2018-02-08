@@ -48,7 +48,7 @@ class Cake extends React.Component{
                             <div key={i} className={this.state.id==='0'?"clear":''}>
                                 {
                                     this.state.id ==='0'?
-                                    <div className="cake-item-title">
+                                    <div className={i===0?"cake-item-title cake-item-title1" :"cake-item-title" }>
                                         <h2>
                                             {item.title}
                                             <span>{item.description}</span>

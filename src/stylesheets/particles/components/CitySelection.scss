@@ -1,0 +1,133 @@
+
+.city_mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.city_selection{
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: 1000;
+    margin: auto;
+    width: 560px;
+    height: 188px;
+    background: url(/images/city/tip.png);
+    h4{
+        line-height: 18px;
+        margin-left: 263px;
+        margin-top: 14px;
+        color: #fff;
+    }
+    dl{
+        margin-top: 12px;
+        height: 110px;
+        dt{
+            height: 77px;
+            width: 60px;
+            float: left;
+            padding: 16px 25px 0 33px;
+            img{
+                height:77px;
+                width: 60px;
+            }
+        }
+        dd{
+            float: left;
+            width: 400px;
+            border-left: 1px dashed #FEFEFE;
+            padding-left: 20px;
+            p{
+                color: #fff;
+                height: 18px;
+                line-height: 18px;
+                span{
+                    display: inline-block;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            ul{
+                margin-top: 20px;
+                li{
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    a{
+                        display: block;
+                        width: 90px;
+                        height: 30px;
+                        background: #fff;
+                        line-height: 30px;
+                        text-align: center;
+                    }
+                    .active{
+                        background: #684029;
+                        color: #fff;
+                        height: 28px;
+                        width: 88px;
+                        border: 1px solid #fff;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+.newGuest{
+    width: 420px;
+    height: 445px;
+    background: #fff;
+    padding: 0 60px 20px;
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: 1000;
+    margin: auto;
+    p{
+        white-space: nowrap;
+        height: 20px;
+        padding: 20px 0px;
+        font-size: 20px;
+        color: #442818;
+        line-height: 40px;
+        border-bottom: 1px dashed #e2dbd7;
+    }
+    .NG_con{
+        padding: 30px 0;
+        min-height: 108px;
+        font-size: 13px;
+        color: #D5BFA7;
+        line-height: 18px;
+        text-align: left;
+        img{
+            width: 420px;
+            display: block;
+            margin-bottom: 25px;
+        }
+    }
+    .NG_btn{
+        a{
+            width: 190px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            background: #F5F5F5;
+            float: left;
+            margin: 0 0 28px;
+        }
+        .NG_buy{
+            float: right;
+            background: #673F2B;
+            color: #fff;
+            float: right;
+        }
+    }
+}

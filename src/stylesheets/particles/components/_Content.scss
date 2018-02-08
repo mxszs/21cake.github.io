@@ -1,6 +1,5 @@
 
 .content{
-    height:3100px;
     .content-nav{
         width:1120px;
         height:103px;
@@ -17,12 +16,13 @@
         height:800px;
         background: #fff;
         margin: 0 auto;
-        margin-top: 150px; 
+        margin-top:70px; 
          
         h4{
             margin:50px 0 20px 50px;
             font-size: 26px;
             font-weight: 400;
+            color: #724228;
             span{
                 font-size: 14px;
                 font-weight: 200;
@@ -107,6 +107,7 @@
             margin:50px 0 20px 50px;
             font-size: 26px;
             font-weight: 400;
+            color: #724228;
             span{
                 font-size: 14px;
                 font-weight: 400;
@@ -135,12 +136,13 @@
         width:1200px;
         height:500px;
         background: #fff;
-        margin: 0 auto;
+        margin: 0 auto 100px;
         overflow: hidden;
-        h4{
+        >h4{
             margin:50px 0 20px 50px;
             font-size: 26px;
             font-weight: 400;
+            color: #724228;
             span{
                 font-size: 14px;
                 font-weight: 400;
@@ -163,8 +165,8 @@
                 width:48%;
                 float: left;
                 line-height: 50px;
-                border:1px solid #ccc;
-                border-radius: 10px;
+                box-shadow: 0 0 6px 0 rgba(0,0,0,0.10);
+                border-radius: 8px;
                 margin-left: 20px;
                 margin-bottom: 50px;
                 img{
@@ -172,8 +174,9 @@
                     border-radius: 10px 10px 0 0;
                 }
                 h4{
-                    margin: 0;
                     padding-left: 20px;
+                    font-size: 26px;
+                    font-weight: 400;
                 }
                 p{
                     padding-left: 20px;

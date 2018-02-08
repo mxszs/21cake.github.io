@@ -31,6 +31,13 @@ class Gallery extends React.Component{
             showDate:{}
         }
     }
+    componentWillReceiveProps(nextProps){
+
+        //当路由切换时
+        if(this.props.location !== nextProps.location){
+            window.scrollTo(0,0)
+        }
+    }
     componentWillReceiveProps(nextProps) {
         if (nextProps.params.id != this.props.params.id) {
             this.ajaxData(nextProps.params.id);
